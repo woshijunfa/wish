@@ -1,0 +1,8 @@
+.*
+!.gitignore
+storage/*
+/*.buildpath
+/*.project
+nohup.out
+doc/qupayclientlib/qupay.config.php
+
