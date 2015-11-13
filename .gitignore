@@ -1,6 +1,5 @@
 .*
 !.gitignore
-storage/*
 /*.buildpath
 /*.project
 nohup.out
