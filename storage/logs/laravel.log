@@ -1,0 +1,1095 @@
+[2015-11-13 11:21:39] production.ERROR: exception 'RuntimeException' with message 'No supported encrypter found. The cipher and / or key length are invalid.' in /share/wish/bootstrap/cache/compiled.php:6911
+Stack trace:
+#0 /share/wish/bootstrap/cache/compiled.php(1057): Illuminate\Encryption\EncryptionServiceProvider->Illuminate\Encryption\{closure}(Object(Illuminate\Foundation\Application), Array)
+#1 /share/wish/bootstrap/cache/compiled.php(1010): Illuminate\Container\Container->build(Object(Closure), Array)
+#2 /share/wish/bootstrap/cache/compiled.php(1537): Illuminate\Container\Container->make('encrypter', Array)
+#3 /share/wish/bootstrap/cache/compiled.php(1102): Illuminate\Foundation\Application->make('Illuminate\\Cont...')
+#4 /share/wish/bootstrap/cache/compiled.php(1086): Illuminate\Container\Container->resolveClass(Object(ReflectionParameter))
+#5 /share/wish/bootstrap/cache/compiled.php(1072): Illuminate\Container\Container->getDependencies(Array, Array)
+#6 /share/wish/bootstrap/cache/compiled.php(1010): Illuminate\Container\Container->build('App\\Http\\Middle...', Array)
+#7 /share/wish/bootstrap/cache/compiled.php(1537): Illuminate\Container\Container->make('App\\Http\\Middle...', Array)
+#8 /share/wish/bootstrap/cache/compiled.php(9400): Illuminate\Foundation\Application->make('App\\Http\\Middle...')
+#9 /share/wish/bootstrap/cache/compiled.php(2659): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#10 [internal function]: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#11 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#12 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#13 /share/wish/bootstrap/cache/compiled.php(9390): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#14 /share/wish/bootstrap/cache/compiled.php(1999): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#15 /share/wish/bootstrap/cache/compiled.php(1985): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#16 /share/wish/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#17 {main}  
+[2015-11-13 11:21:39] production.ERROR: exception 'RuntimeException' with message 'No supported encrypter found. The cipher and / or key length are invalid.' in /share/wish/bootstrap/cache/compiled.php:6911
+Stack trace:
+#0 /share/wish/bootstrap/cache/compiled.php(1057): Illuminate\Encryption\EncryptionServiceProvider->Illuminate\Encryption\{closure}(Object(Illuminate\Foundation\Application), Array)
+#1 /share/wish/bootstrap/cache/compiled.php(1010): Illuminate\Container\Container->build(Object(Closure), Array)
+#2 /share/wish/bootstrap/cache/compiled.php(1537): Illuminate\Container\Container->make('encrypter', Array)
+#3 /share/wish/bootstrap/cache/compiled.php(1102): Illuminate\Foundation\Application->make('Illuminate\\Cont...')
+#4 /share/wish/bootstrap/cache/compiled.php(1086): Illuminate\Container\Container->resolveClass(Object(ReflectionParameter))
+#5 /share/wish/bootstrap/cache/compiled.php(1072): Illuminate\Container\Container->getDependencies(Array, Array)
+#6 /share/wish/bootstrap/cache/compiled.php(1010): Illuminate\Container\Container->build('App\\Http\\Middle...', Array)
+#7 /share/wish/bootstrap/cache/compiled.php(1537): Illuminate\Container\Container->make('App\\Http\\Middle...', Array)
+#8 /share/wish/bootstrap/cache/compiled.php(2006): Illuminate\Foundation\Application->make('App\\Http\\Middle...')
+#9 /share/wish/public/index.php(58): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#10 {main}  
+[2015-11-13 11:22:03] production.ERROR: exception 'RuntimeException' with message 'No supported encrypter found. The cipher and / or key length are invalid.' in /share/wish/bootstrap/cache/compiled.php:6911
+Stack trace:
+#0 /share/wish/bootstrap/cache/compiled.php(1057): Illuminate\Encryption\EncryptionServiceProvider->Illuminate\Encryption\{closure}(Object(Illuminate\Foundation\Application), Array)
+#1 /share/wish/bootstrap/cache/compiled.php(1010): Illuminate\Container\Container->build(Object(Closure), Array)
+#2 /share/wish/bootstrap/cache/compiled.php(1537): Illuminate\Container\Container->make('encrypter', Array)
+#3 /share/wish/bootstrap/cache/compiled.php(1102): Illuminate\Foundation\Application->make('Illuminate\\Cont...')
+#4 /share/wish/bootstrap/cache/compiled.php(1086): Illuminate\Container\Container->resolveClass(Object(ReflectionParameter))
+#5 /share/wish/bootstrap/cache/compiled.php(1072): Illuminate\Container\Container->getDependencies(Array, Array)
+#6 /share/wish/bootstrap/cache/compiled.php(1010): Illuminate\Container\Container->build('App\\Http\\Middle...', Array)
+#7 /share/wish/bootstrap/cache/compiled.php(1537): Illuminate\Container\Container->make('App\\Http\\Middle...', Array)
+#8 /share/wish/bootstrap/cache/compiled.php(9400): Illuminate\Foundation\Application->make('App\\Http\\Middle...')
+#9 /share/wish/bootstrap/cache/compiled.php(2659): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#10 [internal function]: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#11 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#12 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#13 /share/wish/bootstrap/cache/compiled.php(9390): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#14 /share/wish/bootstrap/cache/compiled.php(1999): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#15 /share/wish/bootstrap/cache/compiled.php(1985): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#16 /share/wish/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#17 {main}  
+[2015-11-13 11:22:03] production.ERROR: exception 'RuntimeException' with message 'No supported encrypter found. The cipher and / or key length are invalid.' in /share/wish/bootstrap/cache/compiled.php:6911
+Stack trace:
+#0 /share/wish/bootstrap/cache/compiled.php(1057): Illuminate\Encryption\EncryptionServiceProvider->Illuminate\Encryption\{closure}(Object(Illuminate\Foundation\Application), Array)
+#1 /share/wish/bootstrap/cache/compiled.php(1010): Illuminate\Container\Container->build(Object(Closure), Array)
+#2 /share/wish/bootstrap/cache/compiled.php(1537): Illuminate\Container\Container->make('encrypter', Array)
+#3 /share/wish/bootstrap/cache/compiled.php(1102): Illuminate\Foundation\Application->make('Illuminate\\Cont...')
+#4 /share/wish/bootstrap/cache/compiled.php(1086): Illuminate\Container\Container->resolveClass(Object(ReflectionParameter))
+#5 /share/wish/bootstrap/cache/compiled.php(1072): Illuminate\Container\Container->getDependencies(Array, Array)
+#6 /share/wish/bootstrap/cache/compiled.php(1010): Illuminate\Container\Container->build('App\\Http\\Middle...', Array)
+#7 /share/wish/bootstrap/cache/compiled.php(1537): Illuminate\Container\Container->make('App\\Http\\Middle...', Array)
+#8 /share/wish/bootstrap/cache/compiled.php(2006): Illuminate\Foundation\Application->make('App\\Http\\Middle...')
+#9 /share/wish/public/index.php(58): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#10 {main}  
+[2015-11-13 11:23:16] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Predis\Client' not found' in /share/wish/vendor/laravel/framework/src/Illuminate/Redis/Database.php:61
+Stack trace:
+#0 {main}  
+[2015-11-13 11:25:04] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Predis\Client' not found' in /share/wish/vendor/laravel/framework/src/Illuminate/Redis/Database.php:61
+Stack trace:
+#0 {main}  
+[2015-11-14 21:06:41] local.INFO: generate veriry code:R37G  
+[2015-11-14 21:07:07] local.INFO: generate veriry code:SW8M  
+[2015-11-14 21:07:13] local.INFO: generate veriry code:QXUA  
+[2015-11-14 21:07:14] local.INFO: generate veriry code:5PLH  
+[2015-11-14 21:07:15] local.INFO: generate veriry code:SVDA  
+[2015-11-14 21:11:22] local.INFO: generate veriry code:XH7X  
+[2015-11-14 21:12:20] local.INFO: generate veriry code:M3JZ  
+[2015-11-14 21:13:14] local.INFO: generate veriry code:9R6X  
+[2015-11-14 21:13:15] local.INFO: generate veriry code:WMMZ  
+[2015-11-14 21:13:16] local.INFO: generate veriry code:PX6L  
+[2015-11-14 21:13:17] local.ERROR: exception 'Illuminate\Session\TokenMismatchException' in /share/wish/bootstrap/cache/compiled.php:2611
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#1 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#2 /share/wish/bootstrap/cache/compiled.php(12644): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#3 [internal function]: Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#4 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#5 /share/wish/bootstrap/cache/compiled.php(11296): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#6 [internal function]: Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#7 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#8 /share/wish/bootstrap/cache/compiled.php(12382): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#9 [internal function]: Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#10 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#11 /share/wish/bootstrap/cache/compiled.php(12321): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#12 [internal function]: Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#13 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#14 /share/wish/bootstrap/cache/compiled.php(2659): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#15 [internal function]: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#16 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#17 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#18 /share/wish/bootstrap/cache/compiled.php(9390): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#19 /share/wish/bootstrap/cache/compiled.php(1999): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#20 /share/wish/bootstrap/cache/compiled.php(1985): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#21 /share/wish/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#22 {main}  
+[2015-11-14 21:13:37] local.INFO: generate veriry code:TSD4  
+[2015-11-14 21:13:38] local.ERROR: exception 'Illuminate\Session\TokenMismatchException' in /share/wish/bootstrap/cache/compiled.php:2611
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#1 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#2 /share/wish/bootstrap/cache/compiled.php(12644): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#3 [internal function]: Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#4 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#5 /share/wish/bootstrap/cache/compiled.php(11296): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#6 [internal function]: Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#7 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#8 /share/wish/bootstrap/cache/compiled.php(12382): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#9 [internal function]: Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#10 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#11 /share/wish/bootstrap/cache/compiled.php(12321): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#12 [internal function]: Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#13 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#14 /share/wish/bootstrap/cache/compiled.php(2659): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#15 [internal function]: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#16 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#17 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#18 /share/wish/bootstrap/cache/compiled.php(9390): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#19 /share/wish/bootstrap/cache/compiled.php(1999): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#20 /share/wish/bootstrap/cache/compiled.php(1985): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#21 /share/wish/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#22 {main}  
+[2015-11-14 21:13:42] local.ERROR: exception 'Illuminate\Session\TokenMismatchException' in /share/wish/bootstrap/cache/compiled.php:2611
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#1 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#2 /share/wish/bootstrap/cache/compiled.php(12644): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#3 [internal function]: Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#4 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#5 /share/wish/bootstrap/cache/compiled.php(11296): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#6 [internal function]: Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#7 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#8 /share/wish/bootstrap/cache/compiled.php(12382): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#9 [internal function]: Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#10 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#11 /share/wish/bootstrap/cache/compiled.php(12321): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#12 [internal function]: Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#13 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#14 /share/wish/bootstrap/cache/compiled.php(2659): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#15 [internal function]: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#16 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#17 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#18 /share/wish/bootstrap/cache/compiled.php(9390): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#19 /share/wish/bootstrap/cache/compiled.php(1999): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#20 /share/wish/bootstrap/cache/compiled.php(1985): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#21 /share/wish/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#22 {main}  
+[2015-11-14 21:14:07] local.ERROR: exception 'Illuminate\Session\TokenMismatchException' in /share/wish/bootstrap/cache/compiled.php:2611
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#1 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#2 /share/wish/bootstrap/cache/compiled.php(12644): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#3 [internal function]: Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#4 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#5 /share/wish/bootstrap/cache/compiled.php(11296): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#6 [internal function]: Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#7 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#8 /share/wish/bootstrap/cache/compiled.php(12382): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#9 [internal function]: Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#10 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#11 /share/wish/bootstrap/cache/compiled.php(12321): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#12 [internal function]: Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#13 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#14 /share/wish/bootstrap/cache/compiled.php(2659): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#15 [internal function]: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#16 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#17 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#18 /share/wish/bootstrap/cache/compiled.php(9390): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#19 /share/wish/bootstrap/cache/compiled.php(1999): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#20 /share/wish/bootstrap/cache/compiled.php(1985): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#21 /share/wish/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#22 {main}  
+[2015-11-14 21:14:24] local.INFO: generate veriry code:36Z7  
+[2015-11-14 21:14:26] local.ERROR: exception 'Illuminate\Session\TokenMismatchException' in /share/wish/bootstrap/cache/compiled.php:2611
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#1 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#2 /share/wish/bootstrap/cache/compiled.php(12644): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#3 [internal function]: Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#4 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#5 /share/wish/bootstrap/cache/compiled.php(11296): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#6 [internal function]: Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#7 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#8 /share/wish/bootstrap/cache/compiled.php(12382): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#9 [internal function]: Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#10 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#11 /share/wish/bootstrap/cache/compiled.php(12321): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#12 [internal function]: Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#13 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#14 /share/wish/bootstrap/cache/compiled.php(2659): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#15 [internal function]: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#16 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#17 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#18 /share/wish/bootstrap/cache/compiled.php(9390): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#19 /share/wish/bootstrap/cache/compiled.php(1999): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#20 /share/wish/bootstrap/cache/compiled.php(1985): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#21 /share/wish/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#22 {main}  
+[2015-11-14 21:14:36] local.INFO: generate veriry code:W3M7  
+[2015-11-14 21:14:39] local.INFO: generate veriry code:BRUU  
+[2015-11-14 21:16:14] local.INFO: generate veriry code:D4UV  
+[2015-11-14 21:16:15] local.ERROR: exception 'Illuminate\Session\TokenMismatchException' in /share/wish/bootstrap/cache/compiled.php:2611
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#1 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#2 /share/wish/bootstrap/cache/compiled.php(12644): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#3 [internal function]: Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#4 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#5 /share/wish/bootstrap/cache/compiled.php(11296): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#6 [internal function]: Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#7 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#8 /share/wish/bootstrap/cache/compiled.php(12382): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#9 [internal function]: Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#10 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#11 /share/wish/bootstrap/cache/compiled.php(12321): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#12 [internal function]: Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#13 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#14 /share/wish/bootstrap/cache/compiled.php(2659): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#15 [internal function]: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#16 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#17 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#18 /share/wish/bootstrap/cache/compiled.php(9390): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#19 /share/wish/bootstrap/cache/compiled.php(1999): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#20 /share/wish/bootstrap/cache/compiled.php(1985): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#21 /share/wish/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#22 {main}  
+[2015-11-14 21:16:37] local.ERROR: exception 'Illuminate\Session\TokenMismatchException' in /share/wish/bootstrap/cache/compiled.php:2611
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#1 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#2 /share/wish/bootstrap/cache/compiled.php(12644): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#3 [internal function]: Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#4 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#5 /share/wish/bootstrap/cache/compiled.php(11296): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#6 [internal function]: Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#7 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#8 /share/wish/bootstrap/cache/compiled.php(12382): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#9 [internal function]: Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#10 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#11 /share/wish/bootstrap/cache/compiled.php(12321): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#12 [internal function]: Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#13 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#14 /share/wish/bootstrap/cache/compiled.php(2659): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#15 [internal function]: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#16 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#17 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#18 /share/wish/bootstrap/cache/compiled.php(9390): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#19 /share/wish/bootstrap/cache/compiled.php(1999): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#20 /share/wish/bootstrap/cache/compiled.php(1985): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#21 /share/wish/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#22 {main}  
+[2015-11-14 21:17:03] local.ERROR: exception 'Illuminate\Session\TokenMismatchException' in /share/wish/bootstrap/cache/compiled.php:2611
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#1 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#2 /share/wish/bootstrap/cache/compiled.php(12644): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#3 [internal function]: Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#4 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#5 /share/wish/bootstrap/cache/compiled.php(11296): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#6 [internal function]: Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#7 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#8 /share/wish/bootstrap/cache/compiled.php(12382): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#9 [internal function]: Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#10 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#11 /share/wish/bootstrap/cache/compiled.php(12321): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#12 [internal function]: Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#13 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#14 /share/wish/bootstrap/cache/compiled.php(2659): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#15 [internal function]: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#16 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#17 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#18 /share/wish/bootstrap/cache/compiled.php(9390): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#19 /share/wish/bootstrap/cache/compiled.php(1999): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#20 /share/wish/bootstrap/cache/compiled.php(1985): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#21 /share/wish/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#22 {main}  
+[2015-11-14 21:17:12] local.ERROR: exception 'Illuminate\Session\TokenMismatchException' in /share/wish/bootstrap/cache/compiled.php:2611
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#1 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#2 /share/wish/bootstrap/cache/compiled.php(12644): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#3 [internal function]: Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#4 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#5 /share/wish/bootstrap/cache/compiled.php(11296): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#6 [internal function]: Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#7 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#8 /share/wish/bootstrap/cache/compiled.php(12382): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#9 [internal function]: Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#10 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#11 /share/wish/bootstrap/cache/compiled.php(12321): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#12 [internal function]: Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#13 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#14 /share/wish/bootstrap/cache/compiled.php(2659): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#15 [internal function]: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#16 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#17 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#18 /share/wish/bootstrap/cache/compiled.php(9390): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#19 /share/wish/bootstrap/cache/compiled.php(1999): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#20 /share/wish/bootstrap/cache/compiled.php(1985): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#21 /share/wish/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#22 {main}  
+[2015-11-14 21:19:52] local.INFO: generate veriry code:ZT77  
+[2015-11-14 21:19:52] local.INFO: generate veriry code:U6GC  
+[2015-11-14 21:20:30] local.INFO: generate veriry code:Q4FY  
+[2015-11-14 21:21:08] local.INFO: generate veriry code:JL5A  
+[2015-11-14 21:21:54] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Models\DB' not found' in /share/wish/app/Models/User.php:61
+Stack trace:
+#0 {main}  
+[2015-11-14 21:22:47] local.INFO: generate veriry code:22FY  
+[2015-11-14 21:24:22] local.INFO: generate veriry code:GKYN  
+[2015-11-14 21:25:28] local.INFO: generate veriry code:8NZW  
+[2015-11-14 21:25:51] local.INFO: generate veriry code:DRU3  
+[2015-11-14 21:38:06] local.INFO: generate veriry code:N2W7  
+[2015-11-14 21:38:12] local.INFO: generate veriry code:SQSD  
+[2015-11-14 21:38:12] local.INFO: generate veriry code:S4YJ  
+[2015-11-14 21:38:18] local.INFO: generate veriry code:FWKT  
+[2015-11-14 21:39:00] local.INFO: generate veriry code:428J  
+[2015-11-14 21:39:19] local.INFO: generate veriry code:JDJ7  
+[2015-11-14 21:39:48] local.INFO: generate veriry code:JKGC  
+[2015-11-14 21:39:50] local.INFO: generate veriry code:KRYP  
+[2015-11-14 21:39:50] local.INFO: generate veriry code:WBSP  
+[2015-11-14 21:39:51] local.INFO: generate veriry code:L4C6  
+[2015-11-14 21:39:51] local.INFO: generate veriry code:6UVF  
+[2015-11-14 21:39:51] local.INFO: generate veriry code:8W8X  
+[2015-11-14 21:39:51] local.INFO: generate veriry code:QBU6  
+[2015-11-14 21:39:52] local.INFO: generate veriry code:Y2Y7  
+[2015-11-14 21:39:52] local.INFO: generate veriry code:MM7Z  
+[2015-11-14 21:39:52] local.INFO: generate veriry code:NW3L  
+[2015-11-14 21:39:52] local.INFO: generate veriry code:VTUD  
+[2015-11-14 21:39:52] local.INFO: generate veriry code:9K8Y  
+[2015-11-14 21:39:52] local.INFO: generate veriry code:8QQ7  
+[2015-11-14 21:39:53] local.INFO: generate veriry code:49BS  
+[2015-11-14 21:40:10] local.ERROR: exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'dev'@'localhost' (using password: YES)' in /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:49
+Stack trace:
+#0 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(49): PDO->__construct('mysql:host=loca...', 'dev', 'qufenqi123!@#', Array)
+#1 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(22): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=loca...', Array, Array)
+#2 /share/wish/bootstrap/cache/compiled.php(11183): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
+#3 /share/wish/bootstrap/cache/compiled.php(11179): Illuminate\Database\Connectors\ConnectionFactory->createSingleConnection(Array)
+#4 /share/wish/bootstrap/cache/compiled.php(11095): Illuminate\Database\Connectors\ConnectionFactory->make(Array, 'mysql')
+#5 /share/wish/bootstrap/cache/compiled.php(11050): Illuminate\Database\DatabaseManager->makeConnection('mysql')
+#6 /share/wish/bootstrap/cache/compiled.php(10928): Illuminate\Database\DatabaseManager->connection(NULL)
+#7 /share/wish/bootstrap/cache/compiled.php(10915): Illuminate\Database\Eloquent\Model::resolveConnection(NULL)
+#8 /share/wish/bootstrap/cache/compiled.php(10393): Illuminate\Database\Eloquent\Model->getConnection()
+#9 /share/wish/bootstrap/cache/compiled.php(10370): Illuminate\Database\Eloquent\Model->newBaseQueryBuilder()
+#10 /share/wish/bootstrap/cache/compiled.php(10360): Illuminate\Database\Eloquent\Model->newQueryWithoutScopes()
+#11 /share/wish/bootstrap/cache/compiled.php(11012): Illuminate\Database\Eloquent\Model->newQuery()
+#12 [internal function]: Illuminate\Database\Eloquent\Model->__call('where', Array)
+#13 [internal function]: App\Models\User->where('mobile', '13521705991')
+#14 /share/wish/bootstrap/cache/compiled.php(11018): call_user_func_array(Array, Array)
+#15 /share/wish/app/Models/User.php(61): Illuminate\Database\Eloquent\Model::__callStatic('where', Array)
+#16 /share/wish/app/Models/User.php(61): App\Models\User::where('mobile', '13521705991')
+#17 /share/wish/app/Http/Controllers/VerifyController.php(114): App\Models\User::isAccountExist('13521705991')
+#18 /share/wish/app/Http/Controllers/VerifyController.php(92): App\Http\Controllers\VerifyController->sendRegistPhoneCode(Object(Illuminate\Http\Request))
+#19 [internal function]: App\Http\Controllers\VerifyController->sendPhoneCode(Object(Illuminate\Http\Request))
+#20 /share/wish/bootstrap/cache/compiled.php(8706): call_user_func_array(Array, Array)
+#21 /share/wish/bootstrap/cache/compiled.php(8774): Illuminate\Routing\Controller->callAction('sendPhoneCode', Array)
+#22 /share/wish/bootstrap/cache/compiled.php(8754): Illuminate\Routing\ControllerDispatcher->call(Object(App\Http\Controllers\VerifyController), Object(Illuminate\Routing\Route), 'sendPhoneCode')
+#23 [internal function]: Illuminate\Routing\ControllerDispatcher->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#24 /share/wish/bootstrap/cache/compiled.php(9408): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#25 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#26 /share/wish/bootstrap/cache/compiled.php(9390): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#27 /share/wish/bootstrap/cache/compiled.php(8755): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#28 /share/wish/bootstrap/cache/compiled.php(8740): Illuminate\Routing\ControllerDispatcher->callWithinStack(Object(App\Http\Controllers\VerifyController), Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'sendPhoneCode')
+#29 /share/wish/bootstrap/cache/compiled.php(7717): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'App\\Http\\Contro...', 'sendPhoneCode')
+#30 /share/wish/bootstrap/cache/compiled.php(7688): Illuminate\Routing\Route->runWithCustomDispatcher(Object(Illuminate\Http\Request))
+#31 /share/wish/bootstrap/cache/compiled.php(7342): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#32 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#33 /share/wish/bootstrap/cache/compiled.php(9408): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#34 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#35 /share/wish/bootstrap/cache/compiled.php(9390): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#36 /share/wish/bootstrap/cache/compiled.php(7343): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#37 /share/wish/bootstrap/cache/compiled.php(7331): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#38 /share/wish/bootstrap/cache/compiled.php(7316): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#39 /share/wish/bootstrap/cache/compiled.php(2052): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#40 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#41 /share/wish/bootstrap/cache/compiled.php(9408): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#42 /share/wish/bootstrap/cache/compiled.php(2609): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#43 [internal function]: Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#44 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#45 /share/wish/bootstrap/cache/compiled.php(12644): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#46 [internal function]: Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#47 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#48 /share/wish/bootstrap/cache/compiled.php(11296): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#49 [internal function]: Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#50 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#51 /share/wish/bootstrap/cache/compiled.php(12382): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#52 [internal function]: Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#53 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#54 /share/wish/bootstrap/cache/compiled.php(12321): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#55 [internal function]: Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#56 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#57 /share/wish/bootstrap/cache/compiled.php(2659): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#58 [internal function]: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#59 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#60 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#61 /share/wish/bootstrap/cache/compiled.php(9390): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#62 /share/wish/bootstrap/cache/compiled.php(1999): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#63 /share/wish/bootstrap/cache/compiled.php(1985): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#64 /share/wish/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#65 {main}  
+[2015-11-14 21:40:55] local.INFO: generate veriry code:5ZQF  
+[2015-11-14 21:41:03] local.ERROR: exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'field list'' in /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php:307
+Stack trace:
+#0 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php(307): PDO->prepare('select `id` fro...')
+#1 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php(622): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'select `id` fro...', Array)
+#2 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php(589): Illuminate\Database\Connection->runQueryCallback('select `id` fro...', Array, Object(Closure))
+#3 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php(312): Illuminate\Database\Connection->run('select `id` fro...', Array, Object(Closure))
+#4 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(1377): Illuminate\Database\Connection->select('select `id` fro...', Array, true)
+#5 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(1367): Illuminate\Database\Query\Builder->runSelect()
+#6 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(1352): Illuminate\Database\Query\Builder->getFresh(Array)
+#7 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(404): Illuminate\Database\Query\Builder->get(Array)
+#8 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(166): Illuminate\Database\Eloquent\Builder->getModels(Array)
+#9 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(138): Illuminate\Database\Eloquent\Builder->get(Array)
+#10 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(186): Illuminate\Database\Eloquent\Builder->first(Array)
+#11 /share/wish/app/Models/User.php(61): Illuminate\Database\Eloquent\Builder->value('id')
+#12 /share/wish/app/Http/Controllers/VerifyController.php(114): App\Models\User::isAccountExist('13521705991')
+#13 /share/wish/app/Http/Controllers/VerifyController.php(92): App\Http\Controllers\VerifyController->sendRegistPhoneCode(Object(Illuminate\Http\Request))
+#14 [internal function]: App\Http\Controllers\VerifyController->sendPhoneCode(Object(Illuminate\Http\Request))
+#15 /share/wish/bootstrap/cache/compiled.php(8706): call_user_func_array(Array, Array)
+#16 /share/wish/bootstrap/cache/compiled.php(8774): Illuminate\Routing\Controller->callAction('sendPhoneCode', Array)
+#17 /share/wish/bootstrap/cache/compiled.php(8754): Illuminate\Routing\ControllerDispatcher->call(Object(App\Http\Controllers\VerifyController), Object(Illuminate\Routing\Route), 'sendPhoneCode')
+#18 [internal function]: Illuminate\Routing\ControllerDispatcher->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#19 /share/wish/bootstrap/cache/compiled.php(9408): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#20 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#21 /share/wish/bootstrap/cache/compiled.php(9390): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#22 /share/wish/bootstrap/cache/compiled.php(8755): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#23 /share/wish/bootstrap/cache/compiled.php(8740): Illuminate\Routing\ControllerDispatcher->callWithinStack(Object(App\Http\Controllers\VerifyController), Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'sendPhoneCode')
+#24 /share/wish/bootstrap/cache/compiled.php(7717): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'App\\Http\\Contro...', 'sendPhoneCode')
+#25 /share/wish/bootstrap/cache/compiled.php(7688): Illuminate\Routing\Route->runWithCustomDispatcher(Object(Illuminate\Http\Request))
+#26 /share/wish/bootstrap/cache/compiled.php(7342): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#27 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#28 /share/wish/bootstrap/cache/compiled.php(9408): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#29 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#30 /share/wish/bootstrap/cache/compiled.php(9390): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#31 /share/wish/bootstrap/cache/compiled.php(7343): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#32 /share/wish/bootstrap/cache/compiled.php(7331): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#33 /share/wish/bootstrap/cache/compiled.php(7316): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#34 /share/wish/bootstrap/cache/compiled.php(2052): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#35 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#36 /share/wish/bootstrap/cache/compiled.php(9408): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#37 /share/wish/bootstrap/cache/compiled.php(2609): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#38 [internal function]: Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#39 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#40 /share/wish/bootstrap/cache/compiled.php(12644): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#41 [internal function]: Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#42 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#43 /share/wish/bootstrap/cache/compiled.php(11296): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#44 [internal function]: Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#45 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#46 /share/wish/bootstrap/cache/compiled.php(12382): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#47 [internal function]: Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#48 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#49 /share/wish/bootstrap/cache/compiled.php(12321): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#50 [internal function]: Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#51 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#52 /share/wish/bootstrap/cache/compiled.php(2659): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#53 [internal function]: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#54 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#55 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#56 /share/wish/bootstrap/cache/compiled.php(9390): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#57 /share/wish/bootstrap/cache/compiled.php(1999): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#58 /share/wish/bootstrap/cache/compiled.php(1985): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#59 /share/wish/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#60 {main}
+
+Next exception 'Illuminate\Database\QueryException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'field list' (SQL: select `id` from `user` where `mobile` = 13521705991 limit 1)' in /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php:629
+Stack trace:
+#0 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php(589): Illuminate\Database\Connection->runQueryCallback('select `id` fro...', Array, Object(Closure))
+#1 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php(312): Illuminate\Database\Connection->run('select `id` fro...', Array, Object(Closure))
+#2 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(1377): Illuminate\Database\Connection->select('select `id` fro...', Array, true)
+#3 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(1367): Illuminate\Database\Query\Builder->runSelect()
+#4 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(1352): Illuminate\Database\Query\Builder->getFresh(Array)
+#5 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(404): Illuminate\Database\Query\Builder->get(Array)
+#6 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(166): Illuminate\Database\Eloquent\Builder->getModels(Array)
+#7 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(138): Illuminate\Database\Eloquent\Builder->get(Array)
+#8 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(186): Illuminate\Database\Eloquent\Builder->first(Array)
+#9 /share/wish/app/Models/User.php(61): Illuminate\Database\Eloquent\Builder->value('id')
+#10 /share/wish/app/Http/Controllers/VerifyController.php(114): App\Models\User::isAccountExist('13521705991')
+#11 /share/wish/app/Http/Controllers/VerifyController.php(92): App\Http\Controllers\VerifyController->sendRegistPhoneCode(Object(Illuminate\Http\Request))
+#12 [internal function]: App\Http\Controllers\VerifyController->sendPhoneCode(Object(Illuminate\Http\Request))
+#13 /share/wish/bootstrap/cache/compiled.php(8706): call_user_func_array(Array, Array)
+#14 /share/wish/bootstrap/cache/compiled.php(8774): Illuminate\Routing\Controller->callAction('sendPhoneCode', Array)
+#15 /share/wish/bootstrap/cache/compiled.php(8754): Illuminate\Routing\ControllerDispatcher->call(Object(App\Http\Controllers\VerifyController), Object(Illuminate\Routing\Route), 'sendPhoneCode')
+#16 [internal function]: Illuminate\Routing\ControllerDispatcher->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#17 /share/wish/bootstrap/cache/compiled.php(9408): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#18 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#19 /share/wish/bootstrap/cache/compiled.php(9390): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#20 /share/wish/bootstrap/cache/compiled.php(8755): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#21 /share/wish/bootstrap/cache/compiled.php(8740): Illuminate\Routing\ControllerDispatcher->callWithinStack(Object(App\Http\Controllers\VerifyController), Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'sendPhoneCode')
+#22 /share/wish/bootstrap/cache/compiled.php(7717): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'App\\Http\\Contro...', 'sendPhoneCode')
+#23 /share/wish/bootstrap/cache/compiled.php(7688): Illuminate\Routing\Route->runWithCustomDispatcher(Object(Illuminate\Http\Request))
+#24 /share/wish/bootstrap/cache/compiled.php(7342): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#25 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#26 /share/wish/bootstrap/cache/compiled.php(9408): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#27 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#28 /share/wish/bootstrap/cache/compiled.php(9390): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#29 /share/wish/bootstrap/cache/compiled.php(7343): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#30 /share/wish/bootstrap/cache/compiled.php(7331): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#31 /share/wish/bootstrap/cache/compiled.php(7316): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#32 /share/wish/bootstrap/cache/compiled.php(2052): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#33 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#34 /share/wish/bootstrap/cache/compiled.php(9408): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#35 /share/wish/bootstrap/cache/compiled.php(2609): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#36 [internal function]: Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#37 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#38 /share/wish/bootstrap/cache/compiled.php(12644): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#39 [internal function]: Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#40 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#41 /share/wish/bootstrap/cache/compiled.php(11296): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#42 [internal function]: Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#43 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#44 /share/wish/bootstrap/cache/compiled.php(12382): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#45 [internal function]: Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#46 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#47 /share/wish/bootstrap/cache/compiled.php(12321): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#48 [internal function]: Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#49 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#50 /share/wish/bootstrap/cache/compiled.php(2659): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#51 [internal function]: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#52 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#53 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#54 /share/wish/bootstrap/cache/compiled.php(9390): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#55 /share/wish/bootstrap/cache/compiled.php(1999): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#56 /share/wish/bootstrap/cache/compiled.php(1985): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#57 /share/wish/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#58 {main}  
+[2015-11-14 21:42:11] local.INFO: generate veriry code:PUXN  
+[2015-11-14 21:42:25] local.INFO: generate veriry code:GU7Z  
+[2015-11-14 21:42:30] local.ERROR: exception 'ErrorException' with message 'Undefined variable: code' in /share/wish/app/Models/Utility.php:110
+Stack trace:
+#0 /share/wish/app/Models/Utility.php(110): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined varia...', '/share/wish/app...', 110, Array)
+#1 /share/wish/app/Models/Utility.php(125): App\Models\Utility::sendPhoneMsg('13521705992', '\xE9\xAA\x8C\xE8\xAF\x81\xE7\xA0\x81\xE4\xB8\xBA822...', 1, '822823')
+#2 /share/wish/app/Http/Controllers/VerifyController.php(118): App\Models\Utility::sendRegistPhoneMsg('13521705992')
+#3 /share/wish/app/Http/Controllers/VerifyController.php(92): App\Http\Controllers\VerifyController->sendRegistPhoneCode(Object(Illuminate\Http\Request))
+#4 [internal function]: App\Http\Controllers\VerifyController->sendPhoneCode(Object(Illuminate\Http\Request))
+#5 /share/wish/bootstrap/cache/compiled.php(8706): call_user_func_array(Array, Array)
+#6 /share/wish/bootstrap/cache/compiled.php(8774): Illuminate\Routing\Controller->callAction('sendPhoneCode', Array)
+#7 /share/wish/bootstrap/cache/compiled.php(8754): Illuminate\Routing\ControllerDispatcher->call(Object(App\Http\Controllers\VerifyController), Object(Illuminate\Routing\Route), 'sendPhoneCode')
+#8 [internal function]: Illuminate\Routing\ControllerDispatcher->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#9 /share/wish/bootstrap/cache/compiled.php(9408): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#10 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#11 /share/wish/bootstrap/cache/compiled.php(9390): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#12 /share/wish/bootstrap/cache/compiled.php(8755): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#13 /share/wish/bootstrap/cache/compiled.php(8740): Illuminate\Routing\ControllerDispatcher->callWithinStack(Object(App\Http\Controllers\VerifyController), Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'sendPhoneCode')
+#14 /share/wish/bootstrap/cache/compiled.php(7717): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'App\\Http\\Contro...', 'sendPhoneCode')
+#15 /share/wish/bootstrap/cache/compiled.php(7688): Illuminate\Routing\Route->runWithCustomDispatcher(Object(Illuminate\Http\Request))
+#16 /share/wish/bootstrap/cache/compiled.php(7342): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#17 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#18 /share/wish/bootstrap/cache/compiled.php(9408): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#19 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#20 /share/wish/bootstrap/cache/compiled.php(9390): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#21 /share/wish/bootstrap/cache/compiled.php(7343): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#22 /share/wish/bootstrap/cache/compiled.php(7331): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#23 /share/wish/bootstrap/cache/compiled.php(7316): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#24 /share/wish/bootstrap/cache/compiled.php(2052): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#25 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#26 /share/wish/bootstrap/cache/compiled.php(9408): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#27 /share/wish/bootstrap/cache/compiled.php(2609): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#28 [internal function]: Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#29 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#30 /share/wish/bootstrap/cache/compiled.php(12644): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#31 [internal function]: Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#32 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#33 /share/wish/bootstrap/cache/compiled.php(11296): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#34 [internal function]: Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#35 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#36 /share/wish/bootstrap/cache/compiled.php(12382): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#37 [internal function]: Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#38 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#39 /share/wish/bootstrap/cache/compiled.php(12321): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#40 [internal function]: Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#41 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#42 /share/wish/bootstrap/cache/compiled.php(2659): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#43 [internal function]: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#44 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#45 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#46 /share/wish/bootstrap/cache/compiled.php(9390): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#47 /share/wish/bootstrap/cache/compiled.php(1999): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#48 /share/wish/bootstrap/cache/compiled.php(1985): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#49 /share/wish/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#50 {main}  
+[2015-11-14 21:43:16] local.INFO: generate veriry code:8G8U  
+[2015-11-14 21:43:21] local.INFO: send_phone_msg mobile=13521705992 content = 验证码为200983，仅用于注册趣分期账号, 切勿泄漏，如有问题请致电客服4000990707。  
+[2015-11-14 21:47:27] local.INFO: generate veriry code:QVY4  
+[2015-11-14 21:47:28] local.INFO: generate veriry code:SDBH  
+[2015-11-14 21:48:03] local.INFO: generate veriry code:WHGK  
+[2015-11-14 21:49:26] local.INFO: generate veriry code:XUEJ  
+[2015-11-14 21:49:26] local.INFO: generate veriry code:2MND  
+[2015-11-14 21:49:27] local.INFO: generate veriry code:2VU9  
+[2015-11-14 21:50:24] local.INFO: generate veriry code:3XH6  
+[2015-11-14 21:50:35] local.INFO: generate veriry code:8746  
+[2015-11-14 21:50:50] local.INFO: send_phone_msg mobile=13521705992 content = 验证码为764134，仅用于注册趣分期账号, 切勿泄漏，如有问题请致电客服4000990707。  
+[2015-11-14 21:58:50] local.INFO: generate veriry code:9MPX  
+[2015-11-14 21:58:51] local.INFO: generate veriry code:237H  
+[2015-11-14 21:59:21] local.INFO: generate veriry code:E9HF  
+[2015-11-14 22:01:10] local.INFO: generate veriry code:A7PD  
+[2015-11-14 22:01:12] local.INFO: generate veriry code:6RZ3  
+[2015-11-14 22:01:23] local.INFO: generate veriry code:FBAQ  
+[2015-11-14 22:01:31] local.INFO: send_phone_msg mobile=13521705992 content = 验证码为848683，仅用于注册趣分期账号, 切勿泄漏，如有问题请致电客服4000990707。  
+[2015-11-14 22:01:33] local.INFO: generate veriry code:MTDB  
+[2015-11-14 22:01:33] local.INFO: generate veriry code:P3S7  
+[2015-11-14 22:01:33] local.INFO: generate veriry code:9NW9  
+[2015-11-14 22:08:53] local.INFO: generate veriry code:AV5L  
+[2015-11-14 22:08:54] local.INFO: generate veriry code:6J8U  
+[2015-11-14 22:22:31] local.INFO: generate veriry code:BU4L  
+[2015-11-14 22:22:52] local.INFO: generate veriry code:S7JM  
+[2015-11-14 22:22:53] local.INFO: generate veriry code:UF4S  
+[2015-11-14 22:22:54] local.INFO: generate veriry code:8X4W  
+[2015-11-14 22:22:54] local.INFO: generate veriry code:RE6M  
+[2015-11-14 22:22:54] local.INFO: generate veriry code:AHPH  
+[2015-11-14 22:23:01] local.INFO: send_phone_msg mobile=13521705992 content = 验证码为654197，仅用于注册趣分期账号, 切勿泄漏，如有问题请致电客服4000990707。  
+[2015-11-14 22:23:19] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Http\Controllers\Utility' not found' in /share/wish/app/Http/Controllers/UserController.php:30
+Stack trace:
+#0 {main}  
+[2015-11-14 22:23:49] local.ERROR: exception 'ErrorException' with message 'Missing argument 2 for App\Models\Utility::checkPhoneCode(), called in /share/wish/app/Http/Controllers/UserController.php on line 37 and defined' in /share/wish/app/Models/Utility.php:149
+Stack trace:
+#0 /share/wish/app/Models/Utility.php(149): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'Missing argumen...', '/share/wish/app...', 149, Array)
+#1 /share/wish/app/Http/Controllers/UserController.php(37): App\Models\Utility::checkPhoneCode('13521705992')
+#2 [internal function]: App\Http\Controllers\UserController->doRegist(Object(Illuminate\Support\Facades\Request))
+#3 /share/wish/bootstrap/cache/compiled.php(8706): call_user_func_array(Array, Array)
+#4 /share/wish/bootstrap/cache/compiled.php(8774): Illuminate\Routing\Controller->callAction('doRegist', Array)
+#5 /share/wish/bootstrap/cache/compiled.php(8754): Illuminate\Routing\ControllerDispatcher->call(Object(App\Http\Controllers\UserController), Object(Illuminate\Routing\Route), 'doRegist')
+#6 [internal function]: Illuminate\Routing\ControllerDispatcher->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#7 /share/wish/bootstrap/cache/compiled.php(9408): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#8 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#9 /share/wish/bootstrap/cache/compiled.php(9390): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#10 /share/wish/bootstrap/cache/compiled.php(8755): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#11 /share/wish/bootstrap/cache/compiled.php(8740): Illuminate\Routing\ControllerDispatcher->callWithinStack(Object(App\Http\Controllers\UserController), Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'doRegist')
+#12 /share/wish/bootstrap/cache/compiled.php(7717): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'App\\Http\\Contro...', 'doRegist')
+#13 /share/wish/bootstrap/cache/compiled.php(7688): Illuminate\Routing\Route->runWithCustomDispatcher(Object(Illuminate\Http\Request))
+#14 /share/wish/bootstrap/cache/compiled.php(7342): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#15 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#16 /share/wish/bootstrap/cache/compiled.php(9408): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#17 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#18 /share/wish/bootstrap/cache/compiled.php(9390): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#19 /share/wish/bootstrap/cache/compiled.php(7343): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#20 /share/wish/bootstrap/cache/compiled.php(7331): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#21 /share/wish/bootstrap/cache/compiled.php(7316): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#22 /share/wish/bootstrap/cache/compiled.php(2052): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#23 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#24 /share/wish/bootstrap/cache/compiled.php(9408): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#25 /share/wish/bootstrap/cache/compiled.php(2609): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#26 [internal function]: Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#27 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#28 /share/wish/bootstrap/cache/compiled.php(12644): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#29 [internal function]: Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#30 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#31 /share/wish/bootstrap/cache/compiled.php(11296): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#32 [internal function]: Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#33 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#34 /share/wish/bootstrap/cache/compiled.php(12382): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#35 [internal function]: Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#36 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#37 /share/wish/bootstrap/cache/compiled.php(12321): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#38 [internal function]: Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#39 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#40 /share/wish/bootstrap/cache/compiled.php(2659): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#41 [internal function]: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#42 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#43 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#44 /share/wish/bootstrap/cache/compiled.php(9390): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#45 /share/wish/bootstrap/cache/compiled.php(1999): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#46 /share/wish/bootstrap/cache/compiled.php(1985): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#47 /share/wish/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#48 {main}  
+[2015-11-14 22:24:53] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Http\Controllers\User' not found' in /share/wish/app/Http/Controllers/UserController.php:49
+Stack trace:
+#0 {main}  
+[2015-11-14 22:25:18] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Using $this when not in object context' in /share/wish/app/Http/Controllers/UserController.php:41
+Stack trace:
+#0 {main}  
+[2015-11-14 22:25:51] local.INFO: generate veriry code:7XL2  
+[2015-11-14 22:25:52] local.INFO: generate veriry code:F62F  
+[2015-11-14 22:26:15] local.INFO: generate veriry code:6C4A  
+[2015-11-14 22:26:28] local.INFO: send_phone_msg mobile=13521705992 content = 验证码为261522，仅用于注册趣分期账号, 切勿泄漏，如有问题请致电客服4000990707。  
+[2015-11-14 22:26:32] local.INFO: generate veriry code:VSA4  
+[2015-11-14 22:26:38] local.ERROR: exception 'Illuminate\Database\Eloquent\MassAssignmentException' with message 'mobile' in /share/wish/bootstrap/cache/compiled.php:9821
+Stack trace:
+#0 /share/wish/bootstrap/cache/compiled.php(9761): Illuminate\Database\Eloquent\Model->fill(Array)
+#1 /share/wish/bootstrap/cache/compiled.php(9869): Illuminate\Database\Eloquent\Model->__construct(Array)
+#2 /share/wish/app/Models/User.php(46): Illuminate\Database\Eloquent\Model::create(Array)
+#3 /share/wish/app/Http/Controllers/UserController.php(50): App\Models\User::insertUser(Array)
+#4 [internal function]: App\Http\Controllers\UserController->doRegist(Object(Illuminate\Support\Facades\Request))
+#5 /share/wish/bootstrap/cache/compiled.php(8706): call_user_func_array(Array, Array)
+#6 /share/wish/bootstrap/cache/compiled.php(8774): Illuminate\Routing\Controller->callAction('doRegist', Array)
+#7 /share/wish/bootstrap/cache/compiled.php(8754): Illuminate\Routing\ControllerDispatcher->call(Object(App\Http\Controllers\UserController), Object(Illuminate\Routing\Route), 'doRegist')
+#8 [internal function]: Illuminate\Routing\ControllerDispatcher->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#9 /share/wish/bootstrap/cache/compiled.php(9408): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#10 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#11 /share/wish/bootstrap/cache/compiled.php(9390): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#12 /share/wish/bootstrap/cache/compiled.php(8755): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#13 /share/wish/bootstrap/cache/compiled.php(8740): Illuminate\Routing\ControllerDispatcher->callWithinStack(Object(App\Http\Controllers\UserController), Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'doRegist')
+#14 /share/wish/bootstrap/cache/compiled.php(7717): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'App\\Http\\Contro...', 'doRegist')
+#15 /share/wish/bootstrap/cache/compiled.php(7688): Illuminate\Routing\Route->runWithCustomDispatcher(Object(Illuminate\Http\Request))
+#16 /share/wish/bootstrap/cache/compiled.php(7342): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#17 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#18 /share/wish/bootstrap/cache/compiled.php(9408): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#19 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#20 /share/wish/bootstrap/cache/compiled.php(9390): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#21 /share/wish/bootstrap/cache/compiled.php(7343): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#22 /share/wish/bootstrap/cache/compiled.php(7331): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#23 /share/wish/bootstrap/cache/compiled.php(7316): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#24 /share/wish/bootstrap/cache/compiled.php(2052): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#25 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#26 /share/wish/bootstrap/cache/compiled.php(9408): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#27 /share/wish/bootstrap/cache/compiled.php(2609): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#28 [internal function]: Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#29 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#30 /share/wish/bootstrap/cache/compiled.php(12644): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#31 [internal function]: Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#32 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#33 /share/wish/bootstrap/cache/compiled.php(11296): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#34 [internal function]: Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#35 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#36 /share/wish/bootstrap/cache/compiled.php(12382): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#37 [internal function]: Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#38 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#39 /share/wish/bootstrap/cache/compiled.php(12321): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#40 [internal function]: Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#41 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#42 /share/wish/bootstrap/cache/compiled.php(2659): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#43 [internal function]: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#44 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#45 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#46 /share/wish/bootstrap/cache/compiled.php(9390): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#47 /share/wish/bootstrap/cache/compiled.php(1999): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#48 /share/wish/bootstrap/cache/compiled.php(1985): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#49 /share/wish/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#50 {main}  
+[2015-11-14 22:30:05] local.ERROR: exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'email_UNIQUE'' in /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php:378
+Stack trace:
+#0 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php(378): PDOStatement->execute(Array)
+#1 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php(622): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'insert into `us...', Array)
+#2 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php(589): Illuminate\Database\Connection->runQueryCallback('insert into `us...', Array, Object(Closure))
+#3 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php(379): Illuminate\Database\Connection->run('insert into `us...', Array, Object(Closure))
+#4 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php(335): Illuminate\Database\Connection->statement('insert into `us...', Array)
+#5 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php(32): Illuminate\Database\Connection->insert('insert into `us...', Array)
+#6 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(1724): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `us...', Array, NULL)
+#7 [internal function]: Illuminate\Database\Query\Builder->insertGetId(Array)
+#8 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(938): call_user_func_array(Array, Array)
+#9 [internal function]: Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#10 [internal function]: Illuminate\Database\Eloquent\Builder->insertGetId(Array)
+#11 /share/wish/bootstrap/cache/compiled.php(11013): call_user_func_array(Array, Array)
+#12 [internal function]: Illuminate\Database\Eloquent\Model->__call('insertGetId', Array)
+#13 [internal function]: App\Models\User->insertGetId(Array)
+#14 /share/wish/bootstrap/cache/compiled.php(11018): call_user_func_array(Array, Array)
+#15 /share/wish/app/Models/User.php(46): Illuminate\Database\Eloquent\Model::__callStatic('insertGetId', Array)
+#16 /share/wish/app/Models/User.php(46): App\Models\User::insertGetId(Array)
+#17 /share/wish/app/Console/Commands/test.php(47): App\Models\User::insertUser(Array)
+#18 [internal function]: App\Console\Commands\test->handle()
+#19 /share/wish/bootstrap/cache/compiled.php(955): call_user_func_array(Array, Array)
+#20 /share/wish/vendor/laravel/framework/src/Illuminate/Console/Command.php(150): Illuminate\Container\Container->call(Array)
+#21 /share/wish/vendor/symfony/console/Command/Command.php(259): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 /share/wish/vendor/laravel/framework/src/Illuminate/Console/Command.php(136): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 /share/wish/vendor/symfony/console/Application.php(878): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#24 /share/wish/vendor/symfony/console/Application.php(195): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\test), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#25 /share/wish/vendor/symfony/console/Application.php(126): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#26 /share/wish/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(94): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#27 /share/wish/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#28 {main}
+
+Next exception 'Illuminate\Database\QueryException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'email_UNIQUE' (SQL: insert into `user` (`mobile`, `password`, `nickname`) values (13521705993, y$/4TLp0ZLmomsmOFfiLTe0eN20Awlbay3Be54MLOUcEB6EJqK8YHZe, 13521705993))' in /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php:629
+Stack trace:
+#0 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php(589): Illuminate\Database\Connection->runQueryCallback('insert into `us...', Array, Object(Closure))
+#1 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php(379): Illuminate\Database\Connection->run('insert into `us...', Array, Object(Closure))
+#2 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php(335): Illuminate\Database\Connection->statement('insert into `us...', Array)
+#3 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php(32): Illuminate\Database\Connection->insert('insert into `us...', Array)
+#4 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(1724): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `us...', Array, NULL)
+#5 [internal function]: Illuminate\Database\Query\Builder->insertGetId(Array)
+#6 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(938): call_user_func_array(Array, Array)
+#7 [internal function]: Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#8 [internal function]: Illuminate\Database\Eloquent\Builder->insertGetId(Array)
+#9 /share/wish/bootstrap/cache/compiled.php(11013): call_user_func_array(Array, Array)
+#10 [internal function]: Illuminate\Database\Eloquent\Model->__call('insertGetId', Array)
+#11 [internal function]: App\Models\User->insertGetId(Array)
+#12 /share/wish/bootstrap/cache/compiled.php(11018): call_user_func_array(Array, Array)
+#13 /share/wish/app/Models/User.php(46): Illuminate\Database\Eloquent\Model::__callStatic('insertGetId', Array)
+#14 /share/wish/app/Models/User.php(46): App\Models\User::insertGetId(Array)
+#15 /share/wish/app/Console/Commands/test.php(47): App\Models\User::insertUser(Array)
+#16 [internal function]: App\Console\Commands\test->handle()
+#17 /share/wish/bootstrap/cache/compiled.php(955): call_user_func_array(Array, Array)
+#18 /share/wish/vendor/laravel/framework/src/Illuminate/Console/Command.php(150): Illuminate\Container\Container->call(Array)
+#19 /share/wish/vendor/symfony/console/Command/Command.php(259): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /share/wish/vendor/laravel/framework/src/Illuminate/Console/Command.php(136): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /share/wish/vendor/symfony/console/Application.php(878): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 /share/wish/vendor/symfony/console/Application.php(195): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\test), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 /share/wish/vendor/symfony/console/Application.php(126): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#24 /share/wish/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(94): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#25 /share/wish/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#26 {main}  
+[2015-11-14 22:32:34] local.INFO: generate veriry code:W399  
+[2015-11-14 22:32:35] local.INFO: generate veriry code:9J3U  
+[2015-11-14 22:32:45] local.INFO: generate veriry code:7VR9  
+[2015-11-14 22:32:58] local.INFO: generate veriry code:896K  
+[2015-11-14 22:33:03] local.INFO: send_phone_msg mobile=13521705995 content = 验证码为246487，仅用于注册趣分期账号, 切勿泄漏，如有问题请致电客服4000990707。  
+[2015-11-14 22:33:13] local.INFO: generate veriry code:KT6T  
+[2015-11-14 22:33:13] local.INFO: generate veriry code:T7HE  
+[2015-11-14 22:43:40] local.INFO: generate veriry code:ZQJ9  
+[2015-11-14 22:44:07] local.INFO: generate veriry code:8K9P  
+[2015-11-14 22:44:17] local.INFO: send_phone_msg mobile=13521705996 content = 验证码为451073，仅用于注册趣分期账号, 切勿泄漏，如有问题请致电客服4000990707。  
+[2015-11-14 22:56:16] local.ERROR: exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '13521705999' for key 'mobile_UNIQUE'' in /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php:378
+Stack trace:
+#0 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php(378): PDOStatement->execute(Array)
+#1 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php(622): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'insert into `us...', Array)
+#2 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php(589): Illuminate\Database\Connection->runQueryCallback('insert into `us...', Array, Object(Closure))
+#3 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php(379): Illuminate\Database\Connection->run('insert into `us...', Array, Object(Closure))
+#4 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php(335): Illuminate\Database\Connection->statement('insert into `us...', Array)
+#5 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php(32): Illuminate\Database\Connection->insert('insert into `us...', Array)
+#6 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(1724): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `us...', Array, NULL)
+#7 [internal function]: Illuminate\Database\Query\Builder->insertGetId(Array)
+#8 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(938): call_user_func_array(Array, Array)
+#9 [internal function]: Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#10 [internal function]: Illuminate\Database\Eloquent\Builder->insertGetId(Array)
+#11 /share/wish/bootstrap/cache/compiled.php(11013): call_user_func_array(Array, Array)
+#12 [internal function]: Illuminate\Database\Eloquent\Model->__call('insertGetId', Array)
+#13 [internal function]: App\Models\User->insertGetId(Array)
+#14 /share/wish/bootstrap/cache/compiled.php(11018): call_user_func_array(Array, Array)
+#15 /share/wish/app/Models/User.php(62): Illuminate\Database\Eloquent\Model::__callStatic('insertGetId', Array)
+#16 /share/wish/app/Models/User.php(62): App\Models\User::insertGetId(Array)
+#17 /share/wish/app/Console/Commands/test.php(47): App\Models\User::insertUser(Array)
+#18 [internal function]: App\Console\Commands\test->handle()
+#19 /share/wish/bootstrap/cache/compiled.php(955): call_user_func_array(Array, Array)
+#20 /share/wish/vendor/laravel/framework/src/Illuminate/Console/Command.php(150): Illuminate\Container\Container->call(Array)
+#21 /share/wish/vendor/symfony/console/Command/Command.php(259): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 /share/wish/vendor/laravel/framework/src/Illuminate/Console/Command.php(136): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 /share/wish/vendor/symfony/console/Application.php(878): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#24 /share/wish/vendor/symfony/console/Application.php(195): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\test), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#25 /share/wish/vendor/symfony/console/Application.php(126): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#26 /share/wish/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(94): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#27 /share/wish/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#28 {main}
+
+Next exception 'Illuminate\Database\QueryException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '13521705999' for key 'mobile_UNIQUE' (SQL: insert into `user` (`mobile`, `password`, `nickname`) values (13521705999, yw7KNFHPx1wV1.Tzn55j0e05pBwgBp8PCp8VhCoAeWtwvA573UHIK, 13521705999))' in /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php:629
+Stack trace:
+#0 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php(589): Illuminate\Database\Connection->runQueryCallback('insert into `us...', Array, Object(Closure))
+#1 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php(379): Illuminate\Database\Connection->run('insert into `us...', Array, Object(Closure))
+#2 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php(335): Illuminate\Database\Connection->statement('insert into `us...', Array)
+#3 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php(32): Illuminate\Database\Connection->insert('insert into `us...', Array)
+#4 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(1724): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `us...', Array, NULL)
+#5 [internal function]: Illuminate\Database\Query\Builder->insertGetId(Array)
+#6 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(938): call_user_func_array(Array, Array)
+#7 [internal function]: Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#8 [internal function]: Illuminate\Database\Eloquent\Builder->insertGetId(Array)
+#9 /share/wish/bootstrap/cache/compiled.php(11013): call_user_func_array(Array, Array)
+#10 [internal function]: Illuminate\Database\Eloquent\Model->__call('insertGetId', Array)
+#11 [internal function]: App\Models\User->insertGetId(Array)
+#12 /share/wish/bootstrap/cache/compiled.php(11018): call_user_func_array(Array, Array)
+#13 /share/wish/app/Models/User.php(62): Illuminate\Database\Eloquent\Model::__callStatic('insertGetId', Array)
+#14 /share/wish/app/Models/User.php(62): App\Models\User::insertGetId(Array)
+#15 /share/wish/app/Console/Commands/test.php(47): App\Models\User::insertUser(Array)
+#16 [internal function]: App\Console\Commands\test->handle()
+#17 /share/wish/bootstrap/cache/compiled.php(955): call_user_func_array(Array, Array)
+#18 /share/wish/vendor/laravel/framework/src/Illuminate/Console/Command.php(150): Illuminate\Container\Container->call(Array)
+#19 /share/wish/vendor/symfony/console/Command/Command.php(259): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /share/wish/vendor/laravel/framework/src/Illuminate/Console/Command.php(136): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /share/wish/vendor/symfony/console/Application.php(878): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 /share/wish/vendor/symfony/console/Application.php(195): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\test), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 /share/wish/vendor/symfony/console/Application.php(126): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#24 /share/wish/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(94): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#25 /share/wish/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#26 {main}  
+[2015-11-14 23:11:44] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Cannot declare class App\Console\Commands\test because the name is already in use' in /share/wish/app/Console/Commands/test.php:10
+Stack trace:
+#0 {main}  
+[2015-11-14 23:12:12] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Cannot declare class App\Console\Commands\test because the name is already in use' in /share/wish/app/Console/Commands/test.php:10
+Stack trace:
+#0 {main}  
+[2015-11-14 23:13:03] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Cannot declare class App\Console\Commands\test because the name is already in use' in /share/wish/app/Console/Commands/test.php:10
+Stack trace:
+#0 {main}  
+[2015-11-14 23:14:06] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Console\Commands\App\Models\Test' not found' in /share/wish/app/Console/Commands/test.php:49
+Stack trace:
+#0 {main}  
+[2015-11-14 23:14:32] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Console\Commands\App\Models\Test' not found' in /share/wish/app/Console/Commands/test.php:49
+Stack trace:
+#0 {main}  
+[2015-11-14 23:14:46] local.ERROR: exception 'Illuminate\Database\Eloquent\MassAssignmentException' with message 'test' in /share/wish/bootstrap/cache/compiled.php:9821
+Stack trace:
+#0 /share/wish/bootstrap/cache/compiled.php(9761): Illuminate\Database\Eloquent\Model->fill(Array)
+#1 /share/wish/bootstrap/cache/compiled.php(9869): Illuminate\Database\Eloquent\Model->__construct(Array)
+#2 /share/wish/app/Console/Commands/test.php(49): Illuminate\Database\Eloquent\Model::create(Array)
+#3 [internal function]: App\Console\Commands\test->handle()
+#4 /share/wish/bootstrap/cache/compiled.php(955): call_user_func_array(Array, Array)
+#5 /share/wish/vendor/laravel/framework/src/Illuminate/Console/Command.php(150): Illuminate\Container\Container->call(Array)
+#6 /share/wish/vendor/symfony/console/Command/Command.php(259): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 /share/wish/vendor/laravel/framework/src/Illuminate/Console/Command.php(136): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /share/wish/vendor/symfony/console/Application.php(878): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /share/wish/vendor/symfony/console/Application.php(195): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\test), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /share/wish/vendor/symfony/console/Application.php(126): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /share/wish/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(94): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /share/wish/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 {main}  
+[2015-11-14 23:15:14] local.ERROR: exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'wish.tests' doesn't exist' in /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php:378
+Stack trace:
+#0 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php(378): PDO->prepare('insert into `te...')
+#1 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php(622): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'insert into `te...', Array)
+#2 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php(589): Illuminate\Database\Connection->runQueryCallback('insert into `te...', Array, Object(Closure))
+#3 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php(379): Illuminate\Database\Connection->run('insert into `te...', Array, Object(Closure))
+#4 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php(335): Illuminate\Database\Connection->statement('insert into `te...', Array)
+#5 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php(32): Illuminate\Database\Connection->insert('insert into `te...', Array)
+#6 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(1724): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `te...', Array, 'id')
+#7 [internal function]: Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#8 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(938): call_user_func_array(Array, Array)
+#9 /share/wish/bootstrap/cache/compiled.php(10275): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#10 /share/wish/bootstrap/cache/compiled.php(10275): Illuminate\Database\Eloquent\Builder->insertGetId(Array, 'id')
+#11 /share/wish/bootstrap/cache/compiled.php(10265): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#12 /share/wish/bootstrap/cache/compiled.php(10222): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder), Array)
+#13 /share/wish/bootstrap/cache/compiled.php(9870): Illuminate\Database\Eloquent\Model->save()
+#14 /share/wish/app/Console/Commands/test.php(49): Illuminate\Database\Eloquent\Model::create(Array)
+#15 [internal function]: App\Console\Commands\test->handle()
+#16 /share/wish/bootstrap/cache/compiled.php(955): call_user_func_array(Array, Array)
+#17 /share/wish/vendor/laravel/framework/src/Illuminate/Console/Command.php(150): Illuminate\Container\Container->call(Array)
+#18 /share/wish/vendor/symfony/console/Command/Command.php(259): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /share/wish/vendor/laravel/framework/src/Illuminate/Console/Command.php(136): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /share/wish/vendor/symfony/console/Application.php(878): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /share/wish/vendor/symfony/console/Application.php(195): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\test), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 /share/wish/vendor/symfony/console/Application.php(126): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 /share/wish/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(94): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#24 /share/wish/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#25 {main}
+
+Next exception 'Illuminate\Database\QueryException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'wish.tests' doesn't exist (SQL: insert into `tests` (`updated_at`, `created_at`) values (2015-11-14 23:15:14, 2015-11-14 23:15:14))' in /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php:629
+Stack trace:
+#0 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php(589): Illuminate\Database\Connection->runQueryCallback('insert into `te...', Array, Object(Closure))
+#1 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php(379): Illuminate\Database\Connection->run('insert into `te...', Array, Object(Closure))
+#2 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php(335): Illuminate\Database\Connection->statement('insert into `te...', Array)
+#3 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php(32): Illuminate\Database\Connection->insert('insert into `te...', Array)
+#4 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(1724): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `te...', Array, 'id')
+#5 [internal function]: Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#6 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(938): call_user_func_array(Array, Array)
+#7 /share/wish/bootstrap/cache/compiled.php(10275): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#8 /share/wish/bootstrap/cache/compiled.php(10275): Illuminate\Database\Eloquent\Builder->insertGetId(Array, 'id')
+#9 /share/wish/bootstrap/cache/compiled.php(10265): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#10 /share/wish/bootstrap/cache/compiled.php(10222): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder), Array)
+#11 /share/wish/bootstrap/cache/compiled.php(9870): Illuminate\Database\Eloquent\Model->save()
+#12 /share/wish/app/Console/Commands/test.php(49): Illuminate\Database\Eloquent\Model::create(Array)
+#13 [internal function]: App\Console\Commands\test->handle()
+#14 /share/wish/bootstrap/cache/compiled.php(955): call_user_func_array(Array, Array)
+#15 /share/wish/vendor/laravel/framework/src/Illuminate/Console/Command.php(150): Illuminate\Container\Container->call(Array)
+#16 /share/wish/vendor/symfony/console/Command/Command.php(259): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /share/wish/vendor/laravel/framework/src/Illuminate/Console/Command.php(136): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /share/wish/vendor/symfony/console/Application.php(878): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /share/wish/vendor/symfony/console/Application.php(195): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\test), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /share/wish/vendor/symfony/console/Application.php(126): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /share/wish/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(94): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 /share/wish/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 {main}  
+[2015-11-14 23:15:30] local.ERROR: exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'updated_at' in 'field list'' in /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php:378
+Stack trace:
+#0 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php(378): PDO->prepare('insert into `te...')
+#1 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php(622): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'insert into `te...', Array)
+#2 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php(589): Illuminate\Database\Connection->runQueryCallback('insert into `te...', Array, Object(Closure))
+#3 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php(379): Illuminate\Database\Connection->run('insert into `te...', Array, Object(Closure))
+#4 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php(335): Illuminate\Database\Connection->statement('insert into `te...', Array)
+#5 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php(32): Illuminate\Database\Connection->insert('insert into `te...', Array)
+#6 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(1724): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `te...', Array, 'id')
+#7 [internal function]: Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#8 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(938): call_user_func_array(Array, Array)
+#9 /share/wish/bootstrap/cache/compiled.php(10275): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#10 /share/wish/bootstrap/cache/compiled.php(10275): Illuminate\Database\Eloquent\Builder->insertGetId(Array, 'id')
+#11 /share/wish/bootstrap/cache/compiled.php(10265): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#12 /share/wish/bootstrap/cache/compiled.php(10222): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder), Array)
+#13 /share/wish/bootstrap/cache/compiled.php(9870): Illuminate\Database\Eloquent\Model->save()
+#14 /share/wish/app/Console/Commands/test.php(49): Illuminate\Database\Eloquent\Model::create(Array)
+#15 [internal function]: App\Console\Commands\test->handle()
+#16 /share/wish/bootstrap/cache/compiled.php(955): call_user_func_array(Array, Array)
+#17 /share/wish/vendor/laravel/framework/src/Illuminate/Console/Command.php(150): Illuminate\Container\Container->call(Array)
+#18 /share/wish/vendor/symfony/console/Command/Command.php(259): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /share/wish/vendor/laravel/framework/src/Illuminate/Console/Command.php(136): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /share/wish/vendor/symfony/console/Application.php(878): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /share/wish/vendor/symfony/console/Application.php(195): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\test), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 /share/wish/vendor/symfony/console/Application.php(126): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 /share/wish/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(94): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#24 /share/wish/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#25 {main}
+
+Next exception 'Illuminate\Database\QueryException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'updated_at' in 'field list' (SQL: insert into `test` (`updated_at`, `created_at`) values (2015-11-14 23:15:30, 2015-11-14 23:15:30))' in /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php:629
+Stack trace:
+#0 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php(589): Illuminate\Database\Connection->runQueryCallback('insert into `te...', Array, Object(Closure))
+#1 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php(379): Illuminate\Database\Connection->run('insert into `te...', Array, Object(Closure))
+#2 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Connection.php(335): Illuminate\Database\Connection->statement('insert into `te...', Array)
+#3 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php(32): Illuminate\Database\Connection->insert('insert into `te...', Array)
+#4 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(1724): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `te...', Array, 'id')
+#5 [internal function]: Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#6 /share/wish/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(938): call_user_func_array(Array, Array)
+#7 /share/wish/bootstrap/cache/compiled.php(10275): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#8 /share/wish/bootstrap/cache/compiled.php(10275): Illuminate\Database\Eloquent\Builder->insertGetId(Array, 'id')
+#9 /share/wish/bootstrap/cache/compiled.php(10265): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#10 /share/wish/bootstrap/cache/compiled.php(10222): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder), Array)
+#11 /share/wish/bootstrap/cache/compiled.php(9870): Illuminate\Database\Eloquent\Model->save()
+#12 /share/wish/app/Console/Commands/test.php(49): Illuminate\Database\Eloquent\Model::create(Array)
+#13 [internal function]: App\Console\Commands\test->handle()
+#14 /share/wish/bootstrap/cache/compiled.php(955): call_user_func_array(Array, Array)
+#15 /share/wish/vendor/laravel/framework/src/Illuminate/Console/Command.php(150): Illuminate\Container\Container->call(Array)
+#16 /share/wish/vendor/symfony/console/Command/Command.php(259): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /share/wish/vendor/laravel/framework/src/Illuminate/Console/Command.php(136): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /share/wish/vendor/symfony/console/Application.php(878): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /share/wish/vendor/symfony/console/Application.php(195): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\test), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /share/wish/vendor/symfony/console/Application.php(126): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /share/wish/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(94): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 /share/wish/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 {main}  
+[2015-11-14 23:36:13] local.INFO: generate veriry code:52ST  
+[2015-11-14 23:36:25] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Models\Models' not found' in /share/wish/app/Models/User.php:15
+Stack trace:
+#0 {main}  
+[2015-11-14 23:36:33] local.INFO: generate veriry code:3B56  
+[2015-11-14 23:36:53] local.INFO: generate veriry code:VT8Q  
+[2015-11-14 23:37:00] local.INFO: send_phone_msg mobile=13658454447 content = 验证码为565120，仅用于注册趣分期账号, 切勿泄漏，如有问题请致电客服4000990707。  
+[2015-11-14 23:37:01] local.INFO: generate veriry code:XFKH  
+[2015-11-14 23:37:20] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Http\Controllers\Auth' not found' in /share/wish/app/Http/Controllers/UserController.php:61
+Stack trace:
+#0 {main}  
+[2015-11-14 23:37:55] local.INFO: generate veriry code:9F8E  
+[2015-11-14 23:37:58] local.INFO: generate veriry code:SW7B  
+[2015-11-14 23:38:01] local.INFO: generate veriry code:6DUT  
+[2015-11-14 23:38:14] local.INFO: generate veriry code:D6PK  
+[2015-11-14 23:38:20] local.INFO: send_phone_msg mobile=13658454448 content = 验证码为393884，仅用于注册趣分期账号, 切勿泄漏，如有问题请致电客服4000990707。  
+[2015-11-14 23:38:28] local.ERROR: exception 'ErrorException' with message 'include(/share/wish/app/User.php): failed to open stream: No such file or directory' in /share/wish/vendor/composer/ClassLoader.php:412
+Stack trace:
+#0 /share/wish/vendor/composer/ClassLoader.php(412): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'include(/share/...', '/share/wish/ven...', 412, Array)
+#1 /share/wish/vendor/composer/ClassLoader.php(412): Composer\Autoload\includeFile()
+#2 /share/wish/vendor/composer/ClassLoader.php(301): Composer\Autoload\includeFile('/share/wish/app...')
+#3 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\User')
+#4 /share/wish/bootstrap/cache/compiled.php(764): spl_autoload_call('App\\User')
+#5 /share/wish/bootstrap/cache/compiled.php(734): Illuminate\Auth\EloquentUserProvider->createModel()
+#6 /share/wish/bootstrap/cache/compiled.php(590): Illuminate\Auth\EloquentUserProvider->retrieveById(11)
+#7 [internal function]: Illuminate\Auth\Guard->loginUsingId(11)
+#8 /share/wish/bootstrap/cache/compiled.php(11801): call_user_func_array(Array, Array)
+#9 /share/wish/bootstrap/cache/compiled.php(5575): Illuminate\Support\Manager->__call('loginUsingId', Array)
+#10 /share/wish/bootstrap/cache/compiled.php(5575): Illuminate\Auth\AuthManager->loginUsingId(11)
+#11 /share/wish/app/Http/Controllers/UserController.php(62): Illuminate\Support\Facades\Facade::__callStatic('loginUsingId', Array)
+#12 /share/wish/app/Http/Controllers/UserController.php(62): Illuminate\Support\Facades\Auth::loginUsingId(11)
+#13 [internal function]: App\Http\Controllers\UserController->doRegist(Object(Illuminate\Support\Facades\Request))
+#14 /share/wish/bootstrap/cache/compiled.php(8706): call_user_func_array(Array, Array)
+#15 /share/wish/bootstrap/cache/compiled.php(8774): Illuminate\Routing\Controller->callAction('doRegist', Array)
+#16 /share/wish/bootstrap/cache/compiled.php(8754): Illuminate\Routing\ControllerDispatcher->call(Object(App\Http\Controllers\UserController), Object(Illuminate\Routing\Route), 'doRegist')
+#17 [internal function]: Illuminate\Routing\ControllerDispatcher->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#18 /share/wish/bootstrap/cache/compiled.php(9408): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#19 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#20 /share/wish/bootstrap/cache/compiled.php(9390): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#21 /share/wish/bootstrap/cache/compiled.php(8755): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#22 /share/wish/bootstrap/cache/compiled.php(8740): Illuminate\Routing\ControllerDispatcher->callWithinStack(Object(App\Http\Controllers\UserController), Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'doRegist')
+#23 /share/wish/bootstrap/cache/compiled.php(7717): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'App\\Http\\Contro...', 'doRegist')
+#24 /share/wish/bootstrap/cache/compiled.php(7688): Illuminate\Routing\Route->runWithCustomDispatcher(Object(Illuminate\Http\Request))
+#25 /share/wish/bootstrap/cache/compiled.php(7342): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#26 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#27 /share/wish/bootstrap/cache/compiled.php(9408): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#28 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#29 /share/wish/bootstrap/cache/compiled.php(9390): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#30 /share/wish/bootstrap/cache/compiled.php(7343): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#31 /share/wish/bootstrap/cache/compiled.php(7331): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#32 /share/wish/bootstrap/cache/compiled.php(7316): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#33 /share/wish/bootstrap/cache/compiled.php(2052): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#34 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#35 /share/wish/bootstrap/cache/compiled.php(9408): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#36 /share/wish/bootstrap/cache/compiled.php(2609): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#37 [internal function]: Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#38 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#39 /share/wish/bootstrap/cache/compiled.php(12644): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#40 [internal function]: Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#41 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#42 /share/wish/bootstrap/cache/compiled.php(11296): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#43 [internal function]: Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#44 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#45 /share/wish/bootstrap/cache/compiled.php(12382): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#46 [internal function]: Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#47 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#48 /share/wish/bootstrap/cache/compiled.php(12321): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#49 [internal function]: Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#50 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#51 /share/wish/bootstrap/cache/compiled.php(2659): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#52 [internal function]: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#53 /share/wish/bootstrap/cache/compiled.php(9400): call_user_func_array(Array, Array)
+#54 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#55 /share/wish/bootstrap/cache/compiled.php(9390): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#56 /share/wish/bootstrap/cache/compiled.php(1999): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#57 /share/wish/bootstrap/cache/compiled.php(1985): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#58 /share/wish/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#59 {main}  
+[2015-11-14 23:38:30] local.INFO: generate veriry code:796E  
+[2015-11-14 23:38:30] local.INFO: generate veriry code:8BWX  
+[2015-11-14 23:40:40] local.INFO: generate veriry code:GNF8  
+[2015-11-14 23:40:40] local.INFO: generate veriry code:U3EB  

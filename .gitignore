@@ -5,4 +5,4 @@ storage/*
 /*.project
 nohup.out
 doc/qupayclientlib/qupay.config.php
-
+.env

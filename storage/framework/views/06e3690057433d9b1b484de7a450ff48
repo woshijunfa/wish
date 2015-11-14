@@ -1,12 +1,12 @@
-@extends('pc.frame')
-@section('title', '注册')
-@section('content')
+<?php $__env->startSection('title', '注册'); ?>
+<?php $__env->startSection('content'); ?>
 
 <div>
 
 <form action="">
-   <input type="hidden" id='url' value="{!! $name or '/' !!}">
-   {!! csrf_field() !!}
+   <input type="hidden" id='url' value="<?php echo isset($name) ? $name : '/'; ?>">
+   <?php echo csrf_field(); ?>
+
   <div>
     <span id='error'></span>
   </div>
@@ -50,6 +50,8 @@
 <script src="/js/tool.js"></script>
 <script src="/js/regist.js"></script>
 
-@endsection
-@stop
+<?php $__env->stopSection(); ?>
+<?php $__env->stopSection(); ?>
 
+
+<?php echo $__env->make('pc.frame', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

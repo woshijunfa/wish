@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use App\Models\User;
+//use App\Models\Test;
 
 class test extends Command
 {
@@ -13,6 +14,7 @@ class test extends Command
      * @var string
      */
     protected $signature = 'test';
+
 
     /**
      * The console command description.
@@ -38,8 +40,14 @@ class test extends Command
      */
     public function handle()
     {
-
-        var_dump(User::getUser(1));
+        $array = [
+            'mobile'    => '13521705999',
+            'password'  => md5('123456'),
+            'nickname'  => '13521705999'
+        ];
+        $dd = \App\Models\Test::create(['test'=>'df']);
+        $dd = NULL;
+        var_dump(empty($dd) ? $dd :$dd->id);
         //
     }
 }

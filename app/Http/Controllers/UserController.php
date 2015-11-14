@@ -2,18 +2,66 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Utility;
+use App\Models\User;
 use Request;
 use View;
 use Log;
 use Agent;
 use Input;
+use Auth;
 
 class UserController extends Controller
 {
 	//返回错误页面
-	public static function regist(Request $request)
+	public function regist(Request $request)
 	{
-		return View::make('pc.regist');
+		$url = '/';
+		if (!empty(Input::get('callback'))) {
+			$url = Input::get('callback');
+		}
+
+		return View::make('pc.regist',['url'=>$url]);
+	}
+
+	public function doRegist(Request $request)
+	{
+		$mobile = Input::get('mobile');
+		$mobileCode = Input::get('mobile_code');
+		$password = Input::get('password');
+
+		if (empty($mobile) || empty($mobileCode) || empty($password)) 
+		{
+			return $this->returnJsonResult(1,'参数错误');
+		}
+
+		$isok = Utility::checkFormatMobileNum($mobile);
+		if (!$isok) 
+		{
+			return $this->returnJsonResult(2,'手机号码错误');
+		}
+
+		$isok = Utility::checkPhoneCode($mobile,$mobileCode);
+		if (!$isok) 
+		{
+			return $this->returnJsonResult(3,'手机验证码错误');
+		}
+
+		$array = [
+			'mobile' 	=> $mobile,
+			'password'  => $password,
+			'nickname'  => $mobile
+		];
+		
+		$user_id = User::insertUser($array);
+		if (empty($user_id)) 
+		{
+			return $this->returnJsonResult(4,'注册失败，请稍后再试');
+		}
+		
+		Auth::loginUsingId($user_id);
+
+		return $this->returnJsonResult(0,'');
 	}
 }
 

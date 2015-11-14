@@ -69,7 +69,7 @@ class VerifyController extends BaseController
 
     public function checkimg()
     {
-        $code = Input::get('verirycode');
+        $code = Input::get('verifycode');
         if (empty($code)) return $this->returnJsonResult(1,'需要图片验证码');
 
         $isRight = Utility::checkImgCode($code,false); 
@@ -94,7 +94,7 @@ class VerifyController extends BaseController
 
     private function sendRegistPhoneCode(Request $request)
     {
-        $code = Input::get('verirycode');
+        $code = Input::get('verifycode');
         $mobile = Input::get('mobile');
         
         //交验参数
@@ -123,7 +123,7 @@ class VerifyController extends BaseController
 
     private function sendResetLoginPassPhoneCode(Request $request)
     {
-        $code = Input::get('verirycode');
+        $code = Input::get('verifycode');
         $mobile = Input::get('mobile');
 
         //交验参数
