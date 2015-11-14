@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/regist',"UserController@regist");
+
+//验证码相关
+Route::get('/verify/getimg','VerifyController@getimg');
+Route::get('/verify/checkimg', 'VerifyController@checkimg');
+Route::any('/verify/getphonecode', 'VerifyController@sendPhoneCode');
+
