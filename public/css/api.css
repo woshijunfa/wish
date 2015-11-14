@@ -1,0 +1,345 @@
+body{
+	font-size: 14px;
+	font-family: '微软雅黑','宋体',arial;
+	background: #FFFFFF;
+}
+input,button,h3{
+	font-family: '微软雅黑','宋体',arial;
+	outline: none;
+}
+h3{
+	font-weight: bold;
+}
+a{
+	text-decoration: none;
+	color:#000;
+}
+a:hover{
+	text-decoration: underline;
+}
+.hide{
+	display: none;
+}
+.clearfix:before{
+	content: "";
+	display: table;
+}
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+	*zoom: 1;
+}
+
+
+/*头部*/
+.member_top{
+
+	width:1200px;
+	margin:0px auto;
+	height: 100px;
+	margin: 0 auto;
+	position: relative;
+}
+.member_top .logo{
+	width: 240px;
+	height: 51px;
+	display: block;
+	background: url('../images/qupay_logo.png') no-repeat;
+	position: absolute;
+	top: 29px;
+}
+
+.member_top .description
+{
+	font-size: 14px;
+	color: #A6A6A6;
+	margin: 29px 0;
+}
+
+.member_top .mt7
+{
+	font-size: 19px;
+	color:#4E4E4E;
+}
+
+.qu_container
+{
+	width: 100%;
+}
+
+.pay_box
+{
+	border-top: 1px solid #E0E0E0;
+	width:100%;
+	background:#efefef;
+	padding-top: 57px;
+	padding-bottom: 10px;
+}
+
+.pay_con
+{
+	width: 1200px;
+	margin:0 auto;
+}
+
+.pay_title
+{
+	background: #fff;
+	padding:  17px 20px;
+	font-size: 15px;
+	line-height: 24px;
+}
+
+.pay_title .notice
+{
+	width: 60%;
+	margin:10px 0;
+	color: #858585; 
+}
+
+.pay_title .money
+{
+	float: right;
+	max-width:40%;
+	color: #858585; 
+	margin:10px 0;
+}
+
+.pay_title .pay_time_box
+{
+	border: 1px solid #F6E3AE;
+	padding: 10px 8px;
+	background: #FFF8E7;
+	color: #FFA820;
+}
+
+.money .pay_info span
+{
+	color: #FF3E00;
+	font-size: 22px;
+}
+
+.pay_body
+{
+	background:#fff;
+	height: 500px;
+	border-top: 4px solid #B2BBC4;
+}
+
+.pay_body form
+{
+	margin: 103px auto;
+	width: 340px;
+}
+
+.line-cell
+{
+	box-sizing:border-box;
+	width: 100%;
+}
+
+.input_out_box{
+	border:1px solid #CDCDCD;
+	padding: 14px 7px;
+	display: inline-block;
+}
+
+.line-cell .input_out_box:first-child
+{
+	width: 68%;
+}
+
+.line-cell .input_out_box:last-child
+{
+	width: 86px;
+	box-sizing:border-box;
+	text-align: center;
+	background: #F4F4F4;
+}
+
+.input_out_box:first-child
+{
+	margin-bottom: 14px;
+}
+
+.input_out_box span
+{
+	display: inline-block;
+	width: 70px;
+	font-size: 14px;
+	color: #858585;
+}
+
+.input_out_box input
+{
+	border: none;
+
+}
+
+.input_out_box #password
+{
+	letter-spacing: 2px;
+}
+
+.notice_box
+{
+	margin-top: 25px;
+	width: 340px;
+}
+
+.notice_box > span
+{
+	background: #FFF4DA;
+	padding: 6px 11px;
+	font-size: 13px;
+	border-radius: 2px;
+}
+
+.notice_box a
+{
+	float: right;
+}
+
+.notice_box .notice
+{
+	color: #7B7B7B;
+}
+
+.notice_box .notice span
+{
+	color:#FF5521;
+}
+
+.notice_box a
+{
+	color:#00ACFF;
+}
+.pay_body .submit
+{
+	background: #FF3F00;
+	margin-top: 44px;
+	width: 200px;
+	height: 44px;
+	border: none;
+	border-radius: 2px;
+	color: #fff;
+	font-size: 17px;
+	font-style: bold;
+}
+
+
+.member-foot-box{
+	font-size: 12px;
+	text-align: center;
+	padding:15px 0px;
+}
+.member-foot-box p{
+	color: #666;
+	margin-top: 8px;
+}
+.member-foot-box a{
+	color: #666;
+}
+
+
+
+
+.pay_box .content
+{
+	background: #fff;
+	width: 1200px;
+	margin:0 auto;
+	min-height: 640px;
+}
+
+
+
+.pay_success
+{
+	margin: 0 auto 0;
+	padding-top:143px; 
+	width: 380px;
+}
+
+.pay_success .rtn_partner img
+{
+	margin: 0 auto;
+	display: block;
+}
+
+.pay_success .pay_success_text
+{
+	font-size: 19px;
+	text-align: center;
+}
+
+.pay_success a,.pay_success a:hover
+{
+	display: block;
+	margin: 74px auto;
+	background: #FF6200;
+	width: 200px;
+	height: 30px;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 12px;
+	text-decoration:none;
+}
+
+.pay_success .time
+{
+	color: #FF6200;
+}
+
+.error_notice_text
+{
+	font-size:12px;
+	color:#EC2000;
+	margin:12px 0;
+	line-height:16px;
+	text-align:left
+}
+
+.error_box
+{
+	margin: 0 auto;
+	padding-top: 120px;
+	width: 650px;
+}
+
+.error_box .error_desc
+{
+	width: 60%;
+	padding: 160px 160px 0;
+	text-align: center;
+	font-size: 25px;
+	font-weight: 500;
+}
+
+.error_box .error_img
+{
+	display: block;
+	float: right;
+	width: 30%;
+}
+
+.center_button,.center_button:hover
+{
+	display: block;
+	margin: 74px auto;
+	background: #FF6200;
+	width: 200px;
+	height: 30px;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 12px;
+	text-decoration:none;
+}
+
+
+
