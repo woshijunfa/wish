@@ -11,12 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', "HomeController@index");
 
 Route::get('/regist',"UserController@regist");
 Route::post('/user/regist',"UserController@doRegist");
+
+Route::get('/login',"UserController@login");
+Route::post('/user/login',"UserController@doLogin");
+
+Route::get('/user/resetLoginPass',"UserController@resetLoginPass");
+Route::post('/user/doResetLoginPass',"UserController@doResetLoginPass");
 
 //验证码相关
 Route::get('/verify/getimg','VerifyController@getimg');

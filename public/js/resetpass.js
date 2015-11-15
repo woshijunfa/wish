@@ -26,7 +26,7 @@ $("#get_mobile_code").click(function(){
 	postdata['_token'] = _token;
 
 	//发送注册手机号
-	$.post('/verify/getphonecode?action=regist', postdata,
+	$.post('/verify/getphonecode?action=resetloginpass', postdata,
 	function(result){
 	 	switch(result.code)
 	 	{
@@ -130,7 +130,7 @@ $("#submit").click(function(){
 	postdata['_token'] = _token;
 
 	//发送注册手机号
-	$.post('/user/regist', postdata,
+	$.post('/user/doResetLoginPass', postdata,
 	function(result){
 	 	switch(result.code)
 	 	{

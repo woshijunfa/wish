@@ -11,8 +11,8 @@ class GlobalDef{
     const PHONE_VERIFY_CODE_SEND_DURATION_SECOND    = 60;               //同一类别的验证码，发送间隔至少60秒
     const PHONE_VERIFY_CODE_DURATION_MINUTE         = 30;               //手机验证码30分钟有效
 
-    const REGIST_MOBILE_VERIFY_CODE                 = '验证码为%s，仅用于注册趣分期账号, 切勿泄漏，如有问题请致电客服4000990707。';
-    const PHONE_RESET_LOGIN_PASSWORD_MESSAGE        = '验证码为%s，仅用于找回趣分期账号密码, 切勿泄漏，如有问题请致电客服4000990707。';
+    const REGIST_MOBILE_VERIFY_CODE                 = '验证码为%s，仅用于注册wish账号, 切勿泄漏';
+    const PHONE_RESET_LOGIN_PASSWORD_MESSAGE        = '验证码为%s，仅用于找回wish账号密码, 切勿泄漏';
     const PHONE_VERIFY_CODE_PREIFIX                 = 'phone_verify_code_';
 
 

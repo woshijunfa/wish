@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use App\Models\User;
+use Auth;
 //use App\Models\Test;
 
 class test extends Command
@@ -40,6 +41,8 @@ class test extends Command
      */
     public function handle()
     {
+        var_dump(User::resetUserPasswordByAccount('13021705991','123456'));
+die;
         $array = [
             'mobile'    => '13521705999',
             'password'  => md5('123456'),

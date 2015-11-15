@@ -41,12 +41,6 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
                             'remember_token'
                             ];    
     
-    /**
-     * The attributes excluded from the model's JSON form.
-     *
-     * @var array
-     */
-    protected $hidden = ['password', 'remember_token'];
 
     public static function getUser($userId)
     {
@@ -55,12 +49,23 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         return empty($info) ? $info : $info->toArray();   
     }
 
+
     public static function insertUser($userInfo)
     {
         if (empty($userInfo)) return false;
         $userInfo['password'] = Hash::make($userInfo['password']);
         $result = self::create($userInfo);
         return empty($result) ?$result : $result->user_id;
+    }
+
+    public static function resetUserPasswordByAccount($account,$password)
+    {
+        if (empty($account) || empty($password)) return false;
+
+        if (is_numeric($account)) 
+            return 1 == self::where('mobile',$account)->update(['password'=>Hash::make($password)]);
+        else
+            return 1 == self::where('email',$account)->update(['password'=>Hash::make($password)]);            
     }
 
     /*
@@ -79,6 +84,12 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         else $id = self::where('email',$account)->value('user_id');
 
         return $id > 0;
+    }
+
+    public function attempt($val1,$val2)
+    {
+        var_dump($val1);
+        var_dump($val2);
     }
 
 }

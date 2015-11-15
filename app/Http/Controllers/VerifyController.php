@@ -139,6 +139,10 @@ class VerifyController extends BaseController
         $isRight = Utility::checkImgCode($code); 
         if(!$isRight) return $this->returnJsonResult(3,'验证码错误');
 
+        //校验是否注册
+        $isExist = User::isAccountExist($mobile);
+        if (!$isExist) return $this->returnJsonResult(4,'手机号码未注册');
+
         //发送手机验证码
         $isok = Utility::sendResetLoginPassPhoneMsg($mobile);
         if ($isok !== true) return $this->returnJsonResult(5,$isok['message']);

@@ -25,3 +25,4 @@ function T_isPassFormat(password)
 	return password.length >=8 && password.length <= 20;
 }
 
+
