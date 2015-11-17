@@ -21,8 +21,26 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
      *
      * @var string
      */
+
     protected $table = 'user';
 
+
+    protected $primaryKey = 'user_id';
+
+    protected $dateFormat = 'U';
+
+    protected $fillable = [
+                            'user_id',
+                            'nickname',
+                            'mobile',
+                            'email',
+                            'password',
+                            'head_image',
+                            'created_at',
+                            'updated_at',
+                            'remember_token'
+                            ];    
+    
     /**
      * The attributes excluded from the model's JSON form.
      *
@@ -40,10 +58,9 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     public static function insertUser($userInfo)
     {
         if (empty($userInfo)) return false;
-
         $userInfo['password'] = Hash::make($userInfo['password']);
-
-        return self::create($userInfo);
+        $result = self::create($userInfo);
+        return empty($result) ?$result : $result->user_id;
     }
 
     /*
@@ -58,8 +75,8 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     public static function isAccountExist($account)
     {
         $id = 0;
-        if (is_numeric($account)) $id = DB::table(User::USER_TABLE)->where('mobile',$account)->value('id');
-        else $id = DB::table(User::USER_TABLE)->where('email',$account)->value('id');
+        if (is_numeric($account)) $id = self::where('mobile',$account)->value('user_id');
+        else $id = self::where('email',$account)->value('user_id');
 
         return $id > 0;
     }

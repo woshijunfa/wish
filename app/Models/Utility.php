@@ -107,7 +107,7 @@ class Utility extends Eloquent {
     public static function sendPhoneMsg($phoneNum,$content,$action=0,$verifycode = '')
     {
         if (empty($phoneNum) || empty($content)) return false;
-        Cache::put(GlobalDef::PHONE_VERIFY_CODE_PREIFIX . $phoneNum,$code,GlobalDef::PHONE_VERIFY_CODE_DURATION_MINUTE);
+        Cache::put(GlobalDef::PHONE_VERIFY_CODE_PREIFIX . $phoneNum,$verifycode,GlobalDef::PHONE_VERIFY_CODE_DURATION_MINUTE);
 
         //打印断点日志
         Log::info('send_phone_msg mobile=' . $phoneNum . ' content = '. $content);

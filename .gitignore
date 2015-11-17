@@ -1,8 +1,8 @@
 .*
 !.gitignore
-storage/*
+storage
 /*.buildpath
 /*.project
 nohup.out
 doc/qupayclientlib/qupay.config.php
-
+.env

@@ -16,9 +16,10 @@ Route::get('/', function () {
 });
 
 Route::get('/regist',"UserController@regist");
+Route::post('/user/regist',"UserController@doRegist");
 
 //验证码相关
 Route::get('/verify/getimg','VerifyController@getimg');
-Route::get('/verify/checkimg', 'VerifyController@checkimg');
-Route::any('/verify/getphonecode', 'VerifyController@sendPhoneCode');
+Route::post('/verify/checkimg', 'VerifyController@checkimg');
+Route::post('/verify/getphonecode', 'VerifyController@sendPhoneCode');
 
