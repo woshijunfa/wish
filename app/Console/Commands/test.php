@@ -5,7 +5,9 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use App\Models\User;
 use Auth;
-//use App\Models\Test;
+use App\Models\Test;
+use App\Models\Calendar;
+use App\Services\CalendarService;
 
 class test extends Command
 {
@@ -52,5 +54,7 @@ die;
         $dd = NULL;
         var_dump(empty($dd) ? $dd :$dd->id);
         //
+        var_dump(CalendarService::getUserCalendarMonth(1,'2015-10'));
     }
 }
+

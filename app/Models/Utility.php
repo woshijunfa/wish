@@ -257,6 +257,7 @@ class Utility extends Eloquent {
 
     public static function LogException($e)
     {
+        return Log::info($e);
         return app("App\Services\ExceptionMailer")->addException($e);
     }
 
@@ -314,5 +315,13 @@ class Utility extends Eloquent {
         }
         return $rtnstr;
     } 
+
+    public static function validDate($date)
+    {
+        if (!is_string($date)) return false;
+
+        $dateReg = '/^\d4\d2\d2$/';
+        return preg_match($phonereg, $mobilenum);
+    }
 
 }

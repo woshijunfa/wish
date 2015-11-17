@@ -16,6 +16,76 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `calendar`
+--
+
+DROP TABLE IF EXISTS `calendar`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `calendar` (
+  `callendar_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `user_id` bigint(20) NOT NULL,
+  `order_id` bigint(20) NOT NULL DEFAULT '0',
+  `date` date NOT NULL DEFAULT '0000-00-00',
+  `pre_status` enum('free','date','rest') DEFAULT NULL,
+  `status` enum('free','date','rest') NOT NULL DEFAULT 'free',
+  `price` int(11) NOT NULL DEFAULT '0',
+  `remark` varchar(200) NOT NULL DEFAULT '',
+  `created_at` bigint(20) NOT NULL DEFAULT '0',
+  `updated_at` bigint(20) NOT NULL DEFAULT '0',
+  `month` varchar(7) NOT NULL DEFAULT '0000-00',
+  PRIMARY KEY (`callendar_id`),
+  UNIQUE KEY `user_date` (`user_id`,`date`),
+  KEY `user_id` (`user_id`),
+  KEY `month` (`month`),
+  KEY `date` (`date`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `calendar`
+--
+
+LOCK TABLES `calendar` WRITE;
+/*!40000 ALTER TABLE `calendar` DISABLE KEYS */;
+INSERT INTO `calendar` VALUES (1,1,0,'2015-10-01',NULL,'free',0,'',1447749460,1447749460,'2015-10'),(2,1,0,'2015-10-02',NULL,'free',0,'',1447749472,1447749472,'2015-10'),(3,1,0,'2015-11-02',NULL,'free',0,'',1447749479,1447749479,'2015-11');
+/*!40000 ALTER TABLE `calendar` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `order`
+--
+
+DROP TABLE IF EXISTS `order`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `order` (
+  `order_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `subject` varchar(100) NOT NULL DEFAULT '',
+  `total_fee` decimal(10,2) NOT NULL DEFAULT '0.00',
+  `service_fee` decimal(10,2) NOT NULL DEFAULT '0.00',
+  `partner_fee` decimal(10,2) NOT NULL DEFAULT '0.00',
+  `pay_time` bigint(20) NOT NULL DEFAULT '0',
+  `user_id` bigint(20) NOT NULL DEFAULT '0',
+  `partner_id` bigint(20) NOT NULL DEFAULT '0',
+  `order_status` int(11) NOT NULL DEFAULT '0',
+  `created_at` bigint(20) NOT NULL DEFAULT '0',
+  `updated_at` bigint(20) NOT NULL DEFAULT '0',
+  `remark` varchar(200) NOT NULL DEFAULT '',
+  PRIMARY KEY (`order_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `order`
+--
+
+LOCK TABLES `order` WRITE;
+/*!40000 ALTER TABLE `order` DISABLE KEYS */;
+/*!40000 ALTER TABLE `order` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `user`
 --
 
@@ -24,10 +94,10 @@ DROP TABLE IF EXISTS `user`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `user` (
   `user_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `nickname` varchar(45) NOT NULL DEFAULT '',
+  `nickname` varchar(45) DEFAULT NULL,
   `mobile` varchar(20) NOT NULL DEFAULT '',
   `email` varchar(45) NOT NULL DEFAULT '',
-  `password` varchar(45) NOT NULL DEFAULT '',
+  `password` varchar(100) NOT NULL DEFAULT '',
   `head_image` varchar(200) NOT NULL DEFAULT '',
   `created_at` bigint(20) NOT NULL DEFAULT '0',
   `updated_at` bigint(20) NOT NULL DEFAULT '0',
@@ -57,4 +127,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-11-14 14:39:37
+-- Dump completed on 2015-11-17 18:32:38

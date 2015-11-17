@@ -85,6 +85,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 
         return $id > 0;
     }
+    
 
     public function attempt($val1,$val2)
     {
