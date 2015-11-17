@@ -1,0 +1,57 @@
+<?php
+
+namespace App\Services;
+
+use DB;
+use App\Models\Calendar;
+use App\Models\Utility;
+
+class OrderService
+{
+
+
+	//用户下订单预约某人的日期
+	//$cusId 			下单人的ID
+	//$busId 			预约对象的id
+	//$dates 			预约的日期
+	public static function order($cusId,$busId,$dates)
+	{
+		//参数判断
+		if (empty($cusId) || empty($busId) || empty($dates)) return ['code'=>1,'desc'=>'参数错误'];
+		if (!is_array($dates)) $dates = array($dates);
+
+		//获取基本信息
+		$busCals = Calenda::getCalByDates($busId,$dates);
+		if (count($busCals) != count($dates)) return ['code'=>2,'desc'=>'选定日期有未开放日期'];
+
+		$totalPrice = 0;
+		foreach ($busCals as $value) 
+		{
+			if ($value['status'] != 'free') return ['code'=>2,'desc'=>'选定日期有已预约'];
+			$totalPrice += $value['price'];
+		}
+
+        try{
+
+        	//开启事务
+        	DB::beginTransaction();        
+
+        	//生成账单
+        	$tradeInfo = TradeUser::insertTrade($tradeInfo);
+        	if (empty($tradeInfo))
+        	{
+	            DB::rollBack();
+	            return false;
+        	}
+
+            //插入成功，返回tradeid
+            return $tradeInfo;
+        } catch(\Exception $e) {
+            DB::rollBack();
+            Utility::LogException($e);
+            return false;
+        }
+	}
+
+}
+

@@ -4,7 +4,8 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use App\Models\User;
-//use App\Models\Test;
+use App\Models\Calendar;
+use App\Services\CalendarService;
 
 class test extends Command
 {
@@ -40,14 +41,7 @@ class test extends Command
      */
     public function handle()
     {
-        $array = [
-            'mobile'    => '13521705999',
-            'password'  => md5('123456'),
-            'nickname'  => '13521705999'
-        ];
-        $dd = \App\Models\Test::create(['test'=>'df']);
-        $dd = NULL;
-        var_dump(empty($dd) ? $dd :$dd->id);
-        //
+        var_dump(CalendarService::getUserCalendarMonth(1,'2015-10'));
     }
 }
+
