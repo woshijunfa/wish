@@ -36,7 +36,8 @@ $("#submit").click(function(){
 
 	//发送注册手机号
 	$.post('/user/login', postdata,
-	function(result){
+	function(result)
+	{
 	 	switch(result.code)
 	 	{
 	 		case 0:
