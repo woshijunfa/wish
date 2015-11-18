@@ -12,6 +12,7 @@ use Input;
 use Auth;
 
 
+
 class UserController extends Controller
 {
 	//返回错误页面

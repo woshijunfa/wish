@@ -20,6 +20,10 @@ class OrderService
 		if (empty($cusId) || empty($busId) || empty($dates)) return ['code'=>1,'desc'=>'参数错误'];
 		if (!is_array($dates)) $dates = array($dates);
 
+		//check并生成订单人的行程表
+		$isok = CalendarService::checkUserCalendar($cusId,$dates);
+		if ($isok != true) return ['code'=>3,'desc'=>'亲，这天你已经有安排了！'];
+
 		//获取基本信息
 		$busCals = Calenda::getCalByDates($busId,$dates);
 		if (count($busCals) != count($dates)) return ['code'=>2,'desc'=>'选定日期有未开放日期'];
@@ -27,7 +31,10 @@ class OrderService
 		$totalPrice = 0;
 		foreach ($busCals as $value) 
 		{
+			//判断日期
+			if ($value['date'] < date('Y-m',time())) return ['code'=>2,'desc'=>'只能预定今天或之后的时间'];
 			if ($value['status'] != 'free') return ['code'=>2,'desc'=>'选定日期有已预约'];
+			if ($value['price'] <= 1) return ['code'=>2,'desc'=>'用户未设定开放日期价格'];
 			$totalPrice += $value['price'];
 		}
 
@@ -36,10 +43,23 @@ class OrderService
         	//开启事务
         	DB::beginTransaction();        
 
-        	//生成账单
-        	$tradeInfo = TradeUser::insertTrade($tradeInfo);
-        	if (empty($tradeInfo))
+        	//插入订单
+        	$orderId = self::createOrder(['user_id'=>$cusId],
+        								['user_id'=>$busId],
+        								$dates,
+        								$totalPrice);
+        	if (empty($orderId))
         	{
+        		Log::info('生成订单失败 info:' . json_encode(['user_id'=>$cusId,'user_id'=>$busId,'dates'=>$dates,'totalprice'=>$totalPrice]));
+	            DB::rollBack();
+	            return false;
+        	}
+
+        	//更新行程单
+        	$isok = Calendar::orderCalendar($cusId,$busId,$dates,$orderId);
+        	if (true !== $isok) 
+        	{
+        		Log::info('订单行程单失败 info:' . json_encode(['user_id'=>$cusId,'user_id'=>$busId,'dates'=>$dates,'totalprice'=>$totalPrice]));
 	            DB::rollBack();
 	            return false;
         	}
@@ -52,6 +72,26 @@ class OrderService
             return false;
         }
 	}
+
+	//生成订单
+	//$cusInfo 					下单人的信息
+	//$busInfo 					导游的信息
+	//$dates 					预定的日期
+	//$totalFee 				总金额
+	//成功返回订单id，否则返回空
+	public static function createOrder($cusInfo,$busInfo,$dates,$totalFee)
+	{
+		$order['subject'] = count($dates) . '日游';
+		$order['total_fee'] = $totalFee;
+		$order['service_fee'] = $totalFee * GlobalDef::SERVICE_FEE_PERCENT / 100;
+		$order['partner_fee'] = $totalFee - $order['service_fee'];
+		$order['user_id'] = $cusInfo['user_id'];
+		$order['partner_id'] = $busInfo['user_id'];
+		$order['status'] = GlobalDef::ORDER_STATUS_INIT;
+
+		return Calendar::createOrder($order);
+	}
+
 
 }
 

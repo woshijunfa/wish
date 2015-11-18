@@ -23,7 +23,7 @@ class Calendar extends Model
     protected $dateFormat = 'U';
 
     protected $fillable = [
-                            'callendar_id',
+                            'calendar_id',
                             'user_id',
                             'order_id',
                             'date',
@@ -48,16 +48,15 @@ class Calendar extends Model
         return empty($info) ? false : $info->toArray();                    
     }
 
-    public static function insertCal($calInfo)
+    public static function insertCals($calInfos)
     {
-        if (empty($calInfo)) return false;
-        $result = self::create($calInfo);
-        return empty($result) ?$result : $result->callendar_id;
+        if (empty($calInfos)) return false;
+        return self::insert($calInfos);
     }
 
     public static function getCalByDates($userId,$dates)
     {
-        if (empty($user) || empty($dates)) return false;
+        if (empty($userId) || empty($dates)) return false;
         if (!is_array($dates)) $dates = array($dates);
 
         $result = self::where('user_id',$userId)
@@ -67,6 +66,38 @@ class Calendar extends Model
         return empty($result) ? false : $result->toArray();                    
     }
 
+
+    //用户下单后更改行程单
+    //$cusId            客人的用户id
+    //$busId            导游的用户id
+    //$dates            预定的日期列表
+    //$orderId          关联的订单id
+    public static function orderCalendar($cusId,$busId,$dates,$orderId)
+    {
+        if (empty($cusId) || empty($busId) || empty($dates)) return false;
+
+        //更新导游的日程表
+        $count = self::where('user_id',$busId)
+                    ->whereIn('date',$dates)
+                    ->where('status','free')
+                    ->where('date','>=',date('Y-m',time()))
+                    ->update(['pre_status'=>DB::Raw('status'),
+                                'status'=>'date',
+                                'order_id'=>$orderId
+                            ]);
+        if ($count != count($dates)) return false;
+
+        //更新游客日程表
+        $count = self::where('user_id',$busId)
+                    ->whereIn('date',$dates)
+                    ->whereIn('status',['free','rest'])
+                    ->where('date','>=',date('Y-m',time()))
+                    ->update(['pre_status'=>DB::Raw('status'),
+                                'status'=>'date',
+                                'order_id'=>$orderId
+                            ]);
+        return $count != count($dates);        
+    }
 
 
 }

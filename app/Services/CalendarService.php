@@ -9,7 +9,8 @@ class CalendarService
 
 	//fromData默认为当天所在月的开始
 	//toDate默认为开始日期的所在月的结束
-	public static function getUserCalendarMonth($userId,$month=NULL)
+	//$weekFormat是否按照周格式给出
+	public static function getUserCalendarMonth($userId,$month=NULL,$weekFormat=true)
 	{
 		//user_id check
 		if (empty($userId)) return false;
@@ -28,10 +29,27 @@ class CalendarService
 		foreach ($cals as $value) 
 		{
 			$value['week'] = $baseSalary[$value['date']]['week'];
+			$value['day'] = $baseSalary[$value['date']]['day'];
 			$baseSalary[$value['date']] = $value;
 		}
 
-		return $baseSalary;
+		$rtndata = $baseSalary;
+		if ($weekFormat) 
+		{
+			$rtndata = [];
+			$weekarr = [];
+			foreach ($baseSalary as $value) 
+			{
+				$weekarr[] = $value;
+				if (count($weekarr) >= 7) 
+				{
+					$rtndata[] = $weekarr;
+					$weekarr = [];
+				}
+			}
+		}
+
+		return $rtndata;
 	}
 
 
@@ -55,7 +73,7 @@ class CalendarService
 				$curMonth = date('Y-m',$preMonthTime);
 				$curWeek = date('w',$preMonthTime);
 				$day = date('Y-m-d',$preMonthTime);
-				$rtndata[$day] = ['date'=>$day,'status'=>'rest','week'=>date("w",$preMonthTime)];
+				$rtndata[$day] = ['date'=>$day,'status'=>'rest','month'=>$curMonth,'week'=>date("w",$preMonthTime),'day'=>(int)date("d",$preMonthTime)];
 				if ($curWeek == 1) break;
 				$preMonthTime -= 24*3600;
 			}
@@ -68,7 +86,7 @@ class CalendarService
 			$curWeek = date('w',$beginTime);
 			$day = date('Y-m-d',$beginTime);
 			if ($month != $curMonth && $curWeek ==1) break;
-			$rtndata[$day] = ['date'=>$day,'status'=>'rest','week'=>$curWeek];
+			$rtndata[$day] = ['date'=>$day,'status'=>'rest','month'=>$curMonth,'week'=>$curWeek,'day'=>(int)date("d",$beginTime)];
 			$beginTime += 24*3600;
 		} while (true);
 
@@ -77,28 +95,52 @@ class CalendarService
 		return $rtndata;
 	}
 
-	public static function insertCal($userId,$date,$status='free')
+	public static function insertCals($userId,$dates,$status='free')
 	{
-		if (empty($userId) || empty($date)) return false;
+		if (empty($userId) || empty($dates)) return false;
+		if (!is_array($dates)) $dates = [$dates];
 
-		$calInfo = [
-			'user_id' 	=> 	$userId,
-			'date' 		=> 	$date,
-			'status' 	=> 	empty($status) ? 'free' : $status,
-			'month' 	=> 	date('Y-m',strtotime($date))
-		];
+		$cals = [];
+		$curtime = time();
+		foreach ($dates as $date) {
+			$cals[] = [
+				'user_id' 		=> 	$userId,
+				'date' 			=> 	$date,
+				'status' 		=> 	empty($status) ? 'free' : $status,
+				'month' 		=> 	date('Y-m',strtotime($date)),
+				'created_at' 	=> 	$curtime,
+				'updated_at' 	=> 	$curtime
+			];
+		}
 
-		return Calendar::insertCal($calInfo);
+		return Calendar::insertCals($cals);
+	}	
+
+	//检查Guest用户这些天是否有安排，如果有则返回false，如果没有创建默认行程
+	//$userId 			用户id
+	//$dates 			提起列表
+	//成功返回 true
+	//
+	public static function checkUserCalendar($userId,$dates)
+	{
+		if (empty($userId) || empty($dates)) return false;
+
+		//选出这些日期信息查看是否有安排，如果没有则创建
+		$cals = Calenda::getCalByDates($userId,$dates);
+		if (false === $cals) return false;
+
+		$hasVals = [];
+		//检查是否已经有预约的日期
+		foreach ($cals as $cal) 
+		{
+			if ($cal['status'] == 'date') return false;
+			$hasVals[] = $cal['date'];
+		}
+
+		$createVal = array_diff($dates,$hasVals);
+
+		return self::insertCals($userId,$dates);
 	}
 
-	//用户下订单预约某人的日期
-	// $cusId 			下单人的id
-	// $busId 			被预约的人的Id
-	// $dates 			预约的日期 数组，array('2015-01-02','2015-10-21')
-	public static function order($cusId,$busId,$dates)
-	{
-
-	}
-	
 }
 

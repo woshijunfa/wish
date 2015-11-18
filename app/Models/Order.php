@@ -38,9 +38,12 @@ class Calendar extends Model
                             ];    
     
 
+    //创建订单
     public static function createOrder($info)
     {
-        
+        if (empty($info)) return false;
+        $result = self::create($info);
+        return empty($result) ? $result : $result->order_id;
     }
 
 }

@@ -16,7 +16,26 @@ class GlobalDef{
     const PHONE_VERIFY_CODE_PREIFIX                 = 'phone_verify_code_';
 
 
+    const SERVICE_FEE_PERCENT                       = 10;       //单位百分之1
 
+
+
+
+
+
+
+
+
+
+    //订单状态码
+    const   ORDER_STATUS_INIT                           =   0;      //定单创建
+    const   ORDER_STATUS_PAYED                          =   1;      //用户支付
+    const   ORDER_STATUS_CONFIRM                        =   2;      //导游确认
+    const   ORDER_STATUS_FINISH                         =   3;      //订单完成
+    const   ORDER_STATUS_CANCEL                         =   4;      //订单取消
+    const   ORDER_STATUS_APPLY_CANCEL                   =   5;      //订单申请取消（在确认之后，finish之前取消）
+    const   ORDER_STATUS_APPEAL                         =   6;      //导游不同意取消，进入申诉状态
+    const   ORDER_STATUS_APPEAL_FINISH                  =   7;      //申诉方式结束订单
 
 
 

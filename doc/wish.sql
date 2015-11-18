@@ -23,7 +23,7 @@ DROP TABLE IF EXISTS `calendar`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `calendar` (
-  `callendar_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `calendar_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `user_id` bigint(20) NOT NULL,
   `order_id` bigint(20) NOT NULL DEFAULT '0',
   `date` date NOT NULL DEFAULT '0000-00-00',
@@ -34,12 +34,12 @@ CREATE TABLE `calendar` (
   `created_at` bigint(20) NOT NULL DEFAULT '0',
   `updated_at` bigint(20) NOT NULL DEFAULT '0',
   `month` varchar(7) NOT NULL DEFAULT '0000-00',
-  PRIMARY KEY (`callendar_id`),
+  PRIMARY KEY (`calendar_id`),
   UNIQUE KEY `user_date` (`user_id`,`date`),
   KEY `user_id` (`user_id`),
   KEY `month` (`month`),
   KEY `date` (`date`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -48,7 +48,7 @@ CREATE TABLE `calendar` (
 
 LOCK TABLES `calendar` WRITE;
 /*!40000 ALTER TABLE `calendar` DISABLE KEYS */;
-INSERT INTO `calendar` VALUES (1,1,0,'2015-10-01',NULL,'free',0,'',1447749460,1447749460,'2015-10'),(2,1,0,'2015-10-02',NULL,'free',0,'',1447749472,1447749472,'2015-10'),(3,1,0,'2015-11-02',NULL,'free',0,'',1447749479,1447749479,'2015-11');
+INSERT INTO `calendar` VALUES (1,1,0,'2015-10-01',NULL,'free',80,'',1447749460,1447749460,'2015-10'),(2,1,0,'2015-10-02',NULL,'free',80,'',1447749472,1447749472,'2015-10'),(3,1,0,'2015-11-02',NULL,'free',80,'',1447749479,1447749479,'2015-11'),(4,1,1,'2015-10-12',NULL,'date',100,'',0,0,'2015-10'),(5,1,1,'2015-11-12',NULL,'date',100,'',0,0,'2015-11'),(12,2,0,'2015-10-12',NULL,'free',80,'',1447826874,1447826874,'2015-10'),(13,2,0,'2015-10-13',NULL,'free',80,'',1447826874,1447826874,'2015-10'),(14,2,0,'2015-10-14',NULL,'free',80,'',1447826874,1447826874,'2015-10');
 /*!40000 ALTER TABLE `calendar` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -127,4 +127,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-11-17 18:32:38
+-- Dump completed on 2015-11-18 18:46:14
