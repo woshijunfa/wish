@@ -21,15 +21,23 @@ Route::post('/user/login',"UserController@doLogin");
 
 Route::get('/user/resetLoginPass',"UserController@resetLoginPass");
 Route::post('/user/doResetLoginPass',"UserController@doResetLoginPass");
+Route::post('/user/getUserCalendar','CalendarController@getUserCalendar');
+
+
 
 //验证码相关
 Route::get('/verify/getimg','VerifyController@getimg');
 Route::post('/verify/checkimg', 'VerifyController@checkimg');
 Route::post('/verify/getphonecode', 'VerifyController@sendPhoneCode');
 
-Route::post('/user/getUserCalendar','CalendarController@getUserCalendar');
 
-
+//需要登录才有的功能
+Route::group(['middleware' => 'auth'], function ()
+{
+	//订单相关
+	Route::any('/order/createOrder','OrderController@createOrder');
+});
 
 
 Route::get('/test', "TestController@test");
+

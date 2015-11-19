@@ -44,8 +44,8 @@ $("#submit").click(function(){
 	 			window.location = $('#url').val();
 		 		break;
 		 	case 3:
-		        $("#mobile_code_error").text(result.desc);
-		        $("#mobile_code_error").show();
+		        $("#error").text(result.desc);
+		        $("#error").show();
 				break;
 		 	case 2:
 		        $("#mobile_error").text(result.desc);
