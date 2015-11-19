@@ -27,7 +27,7 @@ Route::get('/verify/getimg','VerifyController@getimg');
 Route::post('/verify/checkimg', 'VerifyController@checkimg');
 Route::post('/verify/getphonecode', 'VerifyController@sendPhoneCode');
 
-Route::post('/user/getUserCalendar','CalendarController@getUserCalendar')
+Route::post('/user/getUserCalendar','CalendarController@getUserCalendar');
 
 
 

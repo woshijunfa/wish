@@ -3,9 +3,6 @@
 @section('content')
 
 <div>
-
-{{var_dump($cals)}}
-
 <style type="text/css">
 .calendar_table
 {
@@ -18,25 +15,31 @@ td div
     height: 30px;
 }
 
-div.validday.rest
+div.validday.cal_status_rest
 {
   background: #aaa;
 }
 
-div.validday.free
+div.validday.cal_status_free
 {
   background: green;
 }
 
-div.validday.date
+div.validday.cal_status_date
 {
   background: red;
+}
+
+div.cal_selected{
+  border: 2px solid #fff;
 }
 
 div.unvalidday
 {
   background: #777;
 }
+
+
 
 </style>
 
@@ -74,13 +77,30 @@ div.unvalidday
 
 </div>
 
+<div id='calendarrrr'>
+
+</div>
+
+<div>
+  <p class='text' id='selectedDays'>sss</p>
+  <button id='order_button' > 马上预定 </button>
+</div>
+
 <script src="/js/jquery-1.11.1.min.js"></script>
-<script src="/js/tool.js"></script>
-<script src="/js/login.js"></script>
+<script src="/js/calendar.js"></script>
 
 
 <script type="text/javascript">
-$("td div").click(function(){
+
+$(document).ready(function(){
+    calendar_setmonth('2015-11');
+    calendar_setUserId(1);
+    calendar_setContainer('calendarrrr');
+    calendar_load();
+});
+
+
+$("div.validday").click(function(){
 
     alert( $(this).attr('id'));
 

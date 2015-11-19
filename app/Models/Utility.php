@@ -320,8 +320,15 @@ class Utility extends Eloquent {
     {
         if (!is_string($date)) return false;
 
-        $dateReg = '/^\d4\d2\d2$/';
-        return preg_match($phonereg, $mobilenum);
+        $dateReg = '/^\d{4}-\d{2}-\d{2}$/';
+        return preg_match($dateReg, $date);
     }
 
+    public static function validMonth($month)
+    {
+        if (!is_string($month)) return false;
+
+        $dateReg = '/^\d{4}-\d{2}$/';
+        return preg_match($dateReg, $month);
+    }
 }

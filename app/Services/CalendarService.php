@@ -10,6 +10,7 @@ class CalendarService
 	//fromData默认为当天所在月的开始
 	//toDate默认为开始日期的所在月的结束
 	//$weekFormat是否按照周格式给出
+	//正确返回数据，错误返回false
 	public static function getUserCalendarMonth($userId,$month=NULL,$weekFormat=true)
 	{
 		//user_id check
