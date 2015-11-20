@@ -18,11 +18,7 @@ class UserController extends Controller
 	//返回错误页面
 	public function regist(Request $request)
 	{
-		$url = '/';
-		if (!empty(Input::get('callback'))) {
-			$url = Input::get('callback');
-		}
-
+		$url = Utility::getIntentedUrl();
 		return View::make('pc.regist',['url'=>$url]);
 	}
 
@@ -62,19 +58,17 @@ class UserController extends Controller
 		}
 		
 		Auth::loginUsingId($user_id);
-
+		Utility::forgetIntentdUrl();
+		
 		return $this->returnJsonResult(0,'');
 	}
 
 	public function login(Request $request)
 	{
-		$url = '/';
-		if (!empty(Input::get('callback'))) {
-			$url = Input::get('callback');
-		}
-
+		$url = Utility::getIntentedUrl();
 		return View::make('pc.login',['url'=>$url]);
 	}
+
 
 	public function doLogin(Request $request)
 	{
@@ -98,6 +92,7 @@ class UserController extends Controller
 			return $this->returnJsonResult(3,'手机号或者密码错误');
 		}
 
+		Utility::forgetIntentdUrl();
  		return $this->returnJsonResult(0,'');
 	}
 
@@ -136,6 +131,13 @@ class UserController extends Controller
 		}
 		
 		return $this->returnJsonResult(0,'');
+	}
+
+	public function logout(Request $request)
+	{
+		Auth::logout(); 
+//		$url = Utility::getIntentedUrl(true);
+		return \Redirect::to('/');
 	}
 }
 

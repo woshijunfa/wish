@@ -17,6 +17,7 @@ Route::get('/regist',"UserController@regist");
 Route::post('/user/regist',"UserController@doRegist");
 
 Route::get('/login',"UserController@login");
+Route::get('/logout',"UserController@logout");
 Route::post('/user/login',"UserController@doLogin");
 
 Route::get('/user/resetLoginPass',"UserController@resetLoginPass");
@@ -36,8 +37,15 @@ Route::group(['middleware' => 'auth'], function ()
 {
 	//订单相关
 	Route::any('/order/createOrder','OrderController@createOrder');
+	Route::any('/order/pay','OrderController@payOrderGet');
 });
+
+//支付宝验证相关
+Route::get('/pay/alipay_return','OrderController@onAlipayReturn'); 			//定单支付成功Get
+Route::post('/pay/alipay_notify', 'OrderController@onAlipayNotify'); 		//订单支付成功Post
+
 
 
 Route::get('/test', "TestController@test");
+
 

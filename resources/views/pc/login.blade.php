@@ -5,7 +5,7 @@
 <div>
 
 <form action="">
-   <input type="hidden" id='url' value="{!! $name or '/' !!}">
+   <input type="hidden" id='url' value="{!! $url or '/' !!}">
    {!! csrf_field() !!}
   <div>
     <span id='error'></span>
@@ -39,5 +39,6 @@
 
 @endsection
 @stop
+
 
 

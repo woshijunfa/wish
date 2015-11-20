@@ -4,9 +4,11 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use App\Models\User;
+use App\Models\Order;
 use Auth;
 //use App\Models\Test;
 use App\Models\Calendar;
+use App\Services\PayService;
 use App\Services\CalendarService;
 
 class test extends Command
@@ -43,11 +45,14 @@ class test extends Command
      */
     public function handle()
     {
+        PayService::alipaySign([]);
 
-        var_dump(Calendar::getCalByDates(2,'2015-10-13'));
+        $result = Order::getOrderInfoById(1);
+        var_dump($result);
 die;
+        var_dump(CalendarService::insertCals(2,[]));
+        var_dump(Calendar::getCalByDates(2,'2015-10-13'));
         var_dump(CalendarService::getUserCalendarMonth(1,'2015-10'));
-        var_dump(CalendarService::insertCals(2,['2015-10-12','2015-10-13','2015-10-14']));
         var_dump(User::resetUserPasswordByAccount('13021705991','123456'));
         $array = [
             'mobile'    => '13521705999',

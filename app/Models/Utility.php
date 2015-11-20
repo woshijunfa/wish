@@ -331,4 +331,20 @@ class Utility extends Eloquent {
         $dateReg = '/^\d{4}-\d{2}$/';
         return preg_match($dateReg, $month);
     }
+
+    //设置要跳转的url
+    public static function getIntentedUrl($isForget = false,$key = 'callback')
+    {
+        $url = Input::get($key);
+        if (!empty($url) && !$isForget) Session::put('url.intended',$url);
+        if (empty($url) && $isForget) $url = Session::pull('url.intended');
+        else if (empty($url) && !$isForget) $url = Session::get('url.intended');
+        if (empty($url)) $url = '/';
+        return $url;
+    }
+
+    public static function forgetIntentdUrl()
+    {
+        Session::pull('url.intended');
+    }
 }

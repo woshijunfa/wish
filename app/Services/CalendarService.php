@@ -127,7 +127,7 @@ class CalendarService
 		if (empty($userId) || empty($dates)) return false;
 
 		//选出这些日期信息查看是否有安排，如果没有则创建
-		$cals = Calenda::getCalByDates($userId,$dates);
+		$cals = Calendar::getCalByDates($userId,$dates);
 		if (false === $cals) return false;
 
 		$hasVals = [];
@@ -139,8 +139,9 @@ class CalendarService
 		}
 
 		$createVal = array_diff($dates,$hasVals);
-
-		return self::insertCals($userId,$dates);
+		if (empty($createVal)) return true;
+		
+		return self::insertCals($userId,$createVal);
 	}
 
 }

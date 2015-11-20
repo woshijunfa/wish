@@ -4,11 +4,12 @@ namespace App\Services;
 
 use DB;
 use App\Models\Calendar;
+use App\Models\Order;
 use App\Models\Utility;
+use App\Models\GlobalDef;
 
 class OrderService
 {
-
 
 	//用户下订单预约某人的日期
 	//$cusId 			下单人的ID
@@ -18,6 +19,8 @@ class OrderService
 	{
 		//参数判断
 		if (empty($cusId) || empty($busId) || empty($dates)) return ['code'=>1,'desc'=>'参数错误'];
+		if ($cusId == $busId) return ['code'=>2,'desc'=>'不能预约自己的旅程'];
+
 		if (!is_array($dates)) $dates = array($dates);
 
 		//check并生成订单人的行程表
@@ -25,53 +28,43 @@ class OrderService
 		if ($isok != true) return ['code'=>3,'desc'=>'亲，这天你已经有安排了！'];
 
 		//获取基本信息
-		$busCals = Calenda::getCalByDates($busId,$dates);
-		if (count($busCals) != count($dates)) return ['code'=>2,'desc'=>'选定日期有未开放日期'];
+		$busCals = Calendar::getCalByDates($busId,$dates);
+		if (count($busCals) != count($dates)) return ['code'=>4,'desc'=>'选定日期有未开放日期'];
 
 		$totalPrice = 0;
 		foreach ($busCals as $value) 
 		{
 			//判断日期
-			if ($value['date'] < date('Y-m',time())) return ['code'=>2,'desc'=>'只能预定今天或之后的时间'];
-			if ($value['status'] != 'free') return ['code'=>2,'desc'=>'选定日期有已预约'];
-			if ($value['price'] <= 1) return ['code'=>2,'desc'=>'用户未设定开放日期价格'];
+			if ($value['date'] < date('Y-m',time())) return ['code'=>5,'desc'=>'只能预定今天或之后的时间'];
+			if ($value['status'] != 'free') return ['code'=>6,'desc'=>'选定日期有已预约'];
+			if ($value['price'] <= 1) return ['code'=>7,'desc'=>'用户未设定开放日期价格'];
 			$totalPrice += $value['price'];
 		}
 
         try{
-
-        	//开启事务
-        	DB::beginTransaction();        
 
         	//插入订单
         	$orderId = self::createOrder(['user_id'=>$cusId],
         								['user_id'=>$busId],
         								$dates,
         								$totalPrice);
+        	
         	if (empty($orderId))
         	{
         		Log::info('生成订单失败 info:' . json_encode(['user_id'=>$cusId,'user_id'=>$busId,'dates'=>$dates,'totalprice'=>$totalPrice]));
-	            DB::rollBack();
-	            return false;
+	        	throw new Exception("生成订单失败", 1);
         	}
 
-        	//更新行程单
-        	$isok = Calendar::orderCalendar($cusId,$busId,$dates,$orderId);
-        	if (true !== $isok) 
-        	{
-        		Log::info('订单行程单失败 info:' . json_encode(['user_id'=>$cusId,'user_id'=>$busId,'dates'=>$dates,'totalprice'=>$totalPrice]));
-	            DB::rollBack();
-	            return false;
-        	}
 
             //插入成功，返回tradeid
-            return $tradeInfo;
+            return ['code'=>0,'data'=>$orderId];
+
         } catch(\Exception $e) {
-            DB::rollBack();
             Utility::LogException($e);
-            return false;
+            return ['code'=>8,'desc'=>'生成订单失败，请重新尝试'];
         }
 	}
+
 
 	//生成订单
 	//$cusInfo 					下单人的信息
@@ -88,10 +81,22 @@ class OrderService
 		$order['user_id'] = $cusInfo['user_id'];
 		$order['partner_id'] = $busInfo['user_id'];
 		$order['status'] = GlobalDef::ORDER_STATUS_INIT;
+		$order['order_dates'] = $dates;
 
-		return Calendar::createOrder($order);
+		return Order::createOrder($order);
 	}
 
+	public static function payOrder($orderId)
+	{
+    	//更新行程单
+    	$isok = Calendar::orderCalendar($cusId,$busId,$dates,$orderId);
+    	if (true !== $isok) 
+    	{
+    		Log::info('订单行程单失败 info:' . json_encode(['user_id'=>$cusId,'user_id'=>$busId,'dates'=>$dates,'totalprice'=>$totalPrice]));
+        	throw new Exception("订单行程单失败", 1);
+    	}
+	}
 
 }
+
 

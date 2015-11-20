@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Config;
 use Log;
 
-class Calendar extends Model
+class Order extends Model
 {
 
     /**
@@ -42,8 +42,17 @@ class Calendar extends Model
     public static function createOrder($info)
     {
         if (empty($info)) return false;
+        $info['order_dates'] =  implode(',', $info['order_dates']);
         $result = self::create($info);
         return empty($result) ? $result : $result->order_id;
+    }
+
+    public static function getOrderInfoById($orderId)
+    {
+        if (empty($orderId)) return false;
+
+        $result = self::where('order_id',$orderId)->first();
+        return empty($result) ? $result : $result->toArray();
     }
 
 }

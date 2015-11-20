@@ -221,8 +221,13 @@ $('#order_button').click(function(){
 	$.post('/order/createOrder', postdata,
 	function(result)
 	{
-		if (result.code == 0) {
-			return calendar_load_success(result.data);
+		if (result.code == 0) 
+		{
+			window.location = result.data.url;
+		}
+		else
+		{
+			alert(result.desc);
 		}
 	});
 });
