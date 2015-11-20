@@ -21,7 +21,7 @@ class GlobalDef{
 
 
 
-
+	const ORDER_EXPIRE_MINUTE 		    = 10; 	//订单十分钟，过期
 
 
 

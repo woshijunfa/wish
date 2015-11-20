@@ -45,11 +45,16 @@ class test extends Command
      */
     public function handle()
     {
+    	var_dump(CalendarService::lockUser(2,1,['2015-11-02'],time()+10,1));
+    	var_dump(CalendarService::lockUser(2,1,['2015-11-02'],time()+10,2));
+die;
+die;
+die;
+    	
         PayService::alipaySign([]);
 
         $result = Order::getOrderInfoById(1);
         var_dump($result);
-die;
         var_dump(CalendarService::insertCals(2,[]));
         var_dump(Calendar::getCalByDates(2,'2015-10-13'));
         var_dump(CalendarService::getUserCalendarMonth(1,'2015-10'));

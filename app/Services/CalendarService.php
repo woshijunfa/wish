@@ -3,6 +3,8 @@
 namespace App\Services;
 
 use App\Models\Calendar;
+use App\Models\Utility;
+use DB;
 
 class CalendarService
 {
@@ -144,5 +146,36 @@ class CalendarService
 		return self::insertCals($userId,$createVal);
 	}
 
+	public static function LockUser($userId,$partnerId,$dates,$expireTime,$orderId)
+	{
+		
+		try
+		{
+        		DB::beginTransaction();
+			$isok = Calendar::LockGuestUser($userId,$dates,$expireTime,$orderId);
+			if(!$isok)
+			{
+				DB::rollBack();
+				return "请检查日期有安排或者有未支付订单";
+			}
+
+			$isok = Calendar::LockPartnerUser($partnerId,$dates,$expireTime,$orderId);
+			if(!$isok)
+			{
+				DB::rollBack();
+				return "用户选定日期有安排，或被锁定，请刷新再试";
+			}
+
+			DB::commit();
+			return true;
+		}
+		catch(\Exception $e)
+		{
+			DB::rollBack();
+			Utility::LogException($e);
+			return false;
+		}
+
+	}
 }
 

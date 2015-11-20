@@ -5,6 +5,7 @@ namespace App\Services;
 use DB;
 use App\Models\Calendar;
 use App\Models\Order;
+use App\Models\GlobalDef;
 use App\Models\Utility;
 use App\Models\GlobalDef;
 use Config;
@@ -81,7 +82,8 @@ class PayService
 				"out_trade_no"	=> $out_trade_no,
 				"subject"	=> $subject,
 				"total_fee"	=> $total_fee,
-				"body"	=> $body,
+				"body"		=> $body,
+				"it_b_pay"	=> GlobalDef::ORDER_EXPIRE_MINUTE;
 				"show_url"	=> $show_url,
 				"anti_phishing_key"	=> $anti_phishing_key,
 				"exter_invoke_ip"	=> $exter_invoke_ip,
