@@ -2,7 +2,7 @@
 --
 -- Host: localhost    Database: wish
 -- ------------------------------------------------------
--- Server version	5.1.73
+-- Server version	5.1.73-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -65,6 +65,7 @@ CREATE TABLE `calendar` (
   `created_at` bigint(20) NOT NULL DEFAULT '0',
   `updated_at` bigint(20) NOT NULL DEFAULT '0',
   `month` varchar(7) NOT NULL DEFAULT '0000-00',
+  `lock_time` bigint(20) NOT NULL DEFAULT '0',
   PRIMARY KEY (`calendar_id`),
   UNIQUE KEY `user_date` (`user_id`,`date`),
   KEY `user_id` (`user_id`),
@@ -79,7 +80,7 @@ CREATE TABLE `calendar` (
 
 LOCK TABLES `calendar` WRITE;
 /*!40000 ALTER TABLE `calendar` DISABLE KEYS */;
-INSERT INTO `calendar` VALUES (1,1,0,'2015-10-01',NULL,'free',80,'',1447749460,1447749460,'2015-10'),(2,1,0,'2015-10-02',NULL,'free',80,'',1447749472,1447749472,'2015-10'),(3,1,0,'2015-11-02',NULL,'free',80,'',1447749479,1447749479,'2015-11'),(4,1,1,'2015-10-12',NULL,'date',100,'',0,0,'2015-10'),(5,1,1,'2015-11-12',NULL,'date',100,'',0,0,'2015-11'),(12,2,0,'2015-10-12',NULL,'free',80,'',1447826874,1447826874,'2015-10'),(13,2,0,'2015-10-13',NULL,'free',80,'',1447826874,1447826874,'2015-10'),(14,2,0,'2015-10-14',NULL,'free',80,'',1447826874,1447826874,'2015-10');
+INSERT INTO `calendar` VALUES (1,1,0,'2015-10-01',NULL,'free',80,'',1447749460,1447749460,'2015-10',0),(2,1,0,'2015-10-02',NULL,'free',80,'',1447749472,1447749472,'2015-10',0),(3,1,1,'2015-11-02',NULL,'free',80,'',1447749479,1448038167,'2015-11',1448038177),(4,1,1,'2015-10-12',NULL,'free',100,'',0,0,'2015-10',0),(5,1,1,'2015-11-12',NULL,'free',100,'',0,0,'2015-11',0),(6,2,1,'2015-11-02',NULL,'rest',80,'',0,1448038167,'2015-11',1448038177),(12,2,0,'2015-10-12',NULL,'rest',80,'',1447826874,1447826874,'2015-10',0),(13,2,0,'2015-10-13',NULL,'rest',80,'',1447826874,1447826874,'2015-10',0),(14,2,0,'2015-10-14',NULL,'rest',80,'',1447826874,1447826874,'2015-10',0);
 /*!40000 ALTER TABLE `calendar` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -114,6 +115,32 @@ CREATE TABLE `order` (
 LOCK TABLES `order` WRITE;
 /*!40000 ALTER TABLE `order` DISABLE KEYS */;
 /*!40000 ALTER TABLE `order` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `test`
+--
+
+DROP TABLE IF EXISTS `test`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `test` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `test` varchar(45) DEFAULT NULL,
+  `created_at` bigint(20) DEFAULT NULL,
+  `updated_at` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `test`
+--
+
+LOCK TABLES `test` WRITE;
+/*!40000 ALTER TABLE `test` DISABLE KEYS */;
+INSERT INTO `test` VALUES (1,NULL,2015,2015),(2,NULL,2015,2015),(3,'df',2015,2015),(4,'df',0,0),(5,'df',1447514650,1447514650),(6,'df',NULL,NULL),(7,'df',1447514952,1447514952),(8,'df',1447514961,1447514961),(9,'df',1447514971,1447514971),(10,'df',1447514978,1447514978),(11,'df',1447515039,1447515039),(12,'df',1447515041,1447515041),(13,'df',1447515098,1447515098),(14,'df',1447515110,1447515110),(15,'df',1447515122,1447515122);
+/*!40000 ALTER TABLE `test` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -158,4 +185,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-11-19 18:24:36
+-- Dump completed on 2015-11-21  0:52:47
