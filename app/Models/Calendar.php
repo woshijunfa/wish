@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Config;
 use Log;
+use DB;
 
 class Calendar extends Model
 {
@@ -98,6 +99,32 @@ class Calendar extends Model
                             ]);
         return $count != count($dates);        
     }
+
+	public static function lockGuestUser($userId,$dates,$expireTime,$orderId)
+	{
+        if(empty($userId) || empty($dates) || empty($orderId)) return false;    
+		$count = self::where('user_id',$userId)
+			->whereIn('date',$dates)
+			->whereIn('status',['free','rest'])
+			->whereRaw('(lock_time < '.time()." or order_id=$orderId)")
+			->update(['lock_time'=>$expireTime,'order_id'=>$orderId]);
+
+
+		return $count == count($dates);
+	}
+
+	public static function lockPartnerUser($userId,$dates,$expireTime,$orderId)
+	{
+		if(empty($userId) || empty($dates) || empty($orderId)) return false;	
+		$count = self::where('user_id',$userId)
+			->whereIn('date',$dates)
+			->where('status','free')
+			->whereRaw('(lock_time < '.time()." or order_id=$orderId)")
+			->update(['lock_time'=>$expireTime,'order_id'=>$orderId]);
+
+		return $count == count($dates);
+	}
+
 
 
 }
