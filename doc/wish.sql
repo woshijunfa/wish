@@ -105,7 +105,9 @@ CREATE TABLE `order` (
   `updated_at` bigint(20) NOT NULL DEFAULT '0',
   `remark` varchar(200) NOT NULL DEFAULT '',
   `order_dates` varchar(1000) NOT NULL DEFAULT '',
-  PRIMARY KEY (`order_id`)
+  `order_no` varchar(20) NOT NULL DEFAULT '',
+  PRIMARY KEY (`order_id`),
+  UNIQUE KEY `trade_no` (`order_no`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -115,7 +117,7 @@ CREATE TABLE `order` (
 
 LOCK TABLES `order` WRITE;
 /*!40000 ALTER TABLE `order` DISABLE KEYS */;
-INSERT INTO `order` VALUES (1,'1日游','80.00','8.00','72.00',0,2,1,0,1447993144,1447993144,'','2015-11-02'),(2,'1日游','80.00','8.00','72.00',0,2,1,0,1448097109,1448097109,'','');
+INSERT INTO `order` VALUES (1,'1日游','80.00','8.00','72.00',0,2,1,0,1447993144,1447993144,'','2015-11-02','1234567890123'),(2,'1日游','80.00','8.00','72.00',0,2,1,0,1448097109,1448097109,'','','');
 /*!40000 ALTER TABLE `order` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -187,3 +189,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
+-- Dump completed on 2015-11-21 23:50:16
