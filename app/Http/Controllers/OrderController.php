@@ -13,6 +13,8 @@ use View;
 use Input;
 use Auth;
 
+require_once(base_path().'/app/Libs/pingpp/init.php');
+
 class OrderController extends Controller
 {
 	//创建订单页面
@@ -47,6 +49,7 @@ class OrderController extends Controller
 		//不需要支付的订单转到订单详情
 		if($orderInfo['order_status'] != GlobalDef::ORDER_STATUS_INIT) return Redirect::to('/order/detial?order_id=' . $orderId);
 
+
 		//获取对应的用户信息
 		$partnerInfo = User::getUser($orderInfo['partner_id']);
 		if (empty($partnerInfo))  return $this->errorPage('出错啦！');
@@ -60,11 +63,58 @@ class OrderController extends Controller
 		return View::make('pc.payOrder',$orderInfo);
 	}
 
+	//获取支付对象页面
+	public function getPayChangeObject(Request $request)
+	{
+		//获取订单信息
+		$orderId = Input::get('order');
+		$channel = Input::get('channel');
+
+		if (empty($orderId) || empty($channel)) return $this->returnJsonResult(1,'出错了，请刷新重试');
+
+		//获取订单信息
+		$orderInfo = Order::getOrderInfoById($orderId);
+		if (empty($orderInfo) || $orderInfo['user_id'] != Auth::id()) return $this->returnJsonResult(1,'出错了，请刷新重试');
+
+		//不需要支付的订单转到订单详情
+		if($orderInfo['order_status'] != GlobalDef::ORDER_STATUS_INIT) return $this->returnJsonResult(2,'订单状态有误',['url'=>'/order/detial?order_id=' . $orderId]);;
+
+		$dates = explode(',', $orderInfo['order_dates']);
+		//检查合作者的时间是否OK
+		$isok = CalendarService::checkPartnerCalendar($orderInfo['partner_id'],$dates);
+		if (!$isok) return $this->returnJsonResult(3,'付款晚了，导游那天没空了，亲看下其他时间试试吧');
+
+		//检查用户的安排
+		$isok = CalendarService::checkUserCalendar($orderInfo['user_id'],$dates);
+		if (!$isok) return $this->returnJsonResult(4,'您预约的日期已经有自己的安排了');
+
+		//生成对象
+
+	}
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
 	//alipay页面跳转返回
 	public function onAlipayReturn(Request $request)
 	{
+
+
 		//获取参数
 		$params = Input::get();
+
+		var_dump($params);die;
+
 		Log::info('OrderController::onAlipayReturn params:'.json_encode($params));
 
 		$isSuccess = self::alipayProcess($params);
@@ -104,8 +154,6 @@ class OrderController extends Controller
 		{
 			
 		}
-
-
 	}
 }
 

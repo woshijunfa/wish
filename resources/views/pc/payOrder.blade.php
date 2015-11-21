@@ -22,7 +22,7 @@
   <div class="pay_method">
     <ul class="bank-list bank-list--xpay">
       <li class="item item left">
-          <input id="check-alipay" class="radio ui-radio" type="radio" name="paytype" value="alipay">
+          <input id="check-alipay" class="radio ui-radio" type="radio" name="paytype"  checked="checked"  value="alipay">
           <label for="check-alipay" class="bank-logo" title="支付宝"><span class="bank bank--alipay">支付宝</span></label>
       </li>
       <li class="item item">
@@ -36,13 +36,16 @@
     </ul>
   </div>
 
-  <button>提交确认支付</button>
+  <button id='pay_button'>提交确认支付</button>
 
 </div>
 
 <script src="/js/jquery-1.11.1.min.js"></script>
+<script src="/js/pingpp/pingpp-pc.js"></script>
+<script src="/js/pay.js"></script>
 
 @endsection
 @stop
+
 
 

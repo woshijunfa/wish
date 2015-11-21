@@ -113,5 +113,13 @@ class PayService
 		return $result;
 	}
 
+
+	public static function getPingppObject($channel,$info)
+	{
+		if ($channel == '') 
+		{
+		}
+	}
+
 }
 

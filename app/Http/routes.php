@@ -44,6 +44,8 @@ Route::group(['middleware' => 'auth'], function ()
 Route::get('/pay/alipay_return','OrderController@onAlipayReturn'); 			//定单支付成功Get
 Route::post('/pay/alipay_notify', 'OrderController@onAlipayNotify'); 		//订单支付成功Post
 
+Route::post('/pay/getPayChangeObject', 'PayController@getPayChangeObject'); 		//订单支付成功Post
+
 
 
 Route::get('/test', "TestController@test");

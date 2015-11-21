@@ -144,5 +144,27 @@ class CalendarService
 		return self::insertCals($userId,$createVal);
 	}
 
+	//检查Partner用户这些天是否有安排，如果有则返回false 否则返回true
+	//$userId 			合作者用户id
+	//$dates 			日期列表
+	//成功返回 true
+	//
+	public static function checkPartnerCalendar($userId,$dates)
+	{
+		if (empty($userId) || empty($dates)) return false;
+
+		//获取基本信息
+		$cals = Calendar::getCalByDates($userId,$dates);
+		if (count($cals) != count($dates)) return false; 			//有未开放日期
+
+		foreach ($busCals as $value) 
+		{
+			//判断日期
+			if ($value['date'] < date('Y-m',time())) return false; 	//日期过期
+			if ($value['status'] != 'free') return false; 			//选定日期已经有预约
+		}
+
+		return true;
+	}
 }
 

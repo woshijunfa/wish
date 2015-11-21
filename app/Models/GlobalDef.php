@@ -80,3 +80,4 @@ class GlobalDef{
     const MESSAGE_RESET_LOGIN_PASSWORD      = 'message_reset_login_password';       //修改登录密码的消息
 
 }
+
