@@ -18,7 +18,7 @@ class Controller extends BaseController
 		$pageInfo['info'] = $desc;
 		$pageInfo['url'] = '/';
 
-		return View::make($tpl,$pageInfo);
+		return View::make('pc.error',$pageInfo);
 	}
 
 	public function error(Request $request)

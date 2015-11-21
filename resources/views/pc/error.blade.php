@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Laravel</title>
+        <title>Be right back.</title>
 
         
 
@@ -32,22 +32,16 @@
             }
 
             .title {
-                font-size: 96px;
+                font-size: 72px;
                 margin-bottom: 40px;
-            }
-
-            .quote {
-                font-size: 24px;
             }
         </style>
     </head>
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Laravel 5</div>
-                <div class="quote">{{ Inspiring::quote() }}</div>
+                <div class="title">{{$info}}</div>
             </div>
         </div>
     </body>
 </html>
-

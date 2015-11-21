@@ -160,7 +160,7 @@ class CalendarService
 		$cals = Calendar::getCalByDates($userId,$dates);
 		if (count($cals) != count($dates)) return false; 			//有未开放日期
 
-		foreach ($busCals as $value) 
+		foreach ($cals as $value) 
 		{
 			//判断日期
 			if ($value['date'] < date('Y-m',time())) return false; 	//日期过期

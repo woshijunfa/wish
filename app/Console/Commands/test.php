@@ -5,6 +5,8 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use App\Models\User;
 use App\Models\Order;
+use App\Models\Utility;
+use App\Models\GlobalDef;
 use Auth;
 //use App\Models\Test;
 use App\Models\Calendar;
@@ -45,15 +47,22 @@ class test extends Command
      */
     public function handle()
     {
-    	var_dump(CalendarService::lockUser(2,1,['2015-11-02'],time()+10,1));
-    	var_dump(CalendarService::lockUser(2,1,['2015-11-02'],time()+10,2));
+//        var_dump(uniqid());die;
+
+                //生成对象
+        $orderInfo = Order::getOrderInfoById(1);
+        var_dump($orderInfo);
+        $charge = PayService::getPingppObject(GlobalDef::PAY_CHANNEL_ALIPAY_PC_DIRECT,$orderInfo);
+//        $str = json_decode(sprintf('%s',$charge),true);
+        var_dump($charge);
 die;
 die;
 die;
-    	
+        var_dump(CalendarService::lockUser(2,1,['2015-11-02'],time()+10,1));
+        var_dump(CalendarService::lockUser(2,1,['2015-11-02'],time()+10,2));
+        
         PayService::alipaySign([]);
 
-        $result = Order::getOrderInfoById(1);
         var_dump($result);
         var_dump(CalendarService::insertCals(2,[]));
         var_dump(Calendar::getCalByDates(2,'2015-10-13'));

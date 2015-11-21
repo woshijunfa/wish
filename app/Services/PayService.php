@@ -5,13 +5,13 @@ namespace App\Services;
 use DB;
 use App\Models\Calendar;
 use App\Models\Order;
-use App\Models\GlobalDef;
 use App\Models\Utility;
 use App\Models\GlobalDef;
 use Config;
 
 require_once(base_path().'/app/Libs/alipay/lib/alipay_submit.class.php');
 require_once(base_path().'/app/Libs/alipay/lib/alipay_notify.class.php');
+require_once(base_path().'/app/Libs/pingpp/init.php');
 
 class PayService
 {
@@ -34,11 +34,11 @@ class PayService
         $payment_type = "1";
         //必填，不能修改
         //服务器异步通知页面路径
-        $notify_url =  Config::get('app.homeurl')."/pay/alipay_notify";
+        $notify_url =  Config::get('app.url')."/pay/alipay_notify";
         //需http://格式的完整路径，不能加?id=123这类自定义参数
 
         //页面跳转同步通知页面路径
-        $return_url = Config::get('app.homeurl')."/pay/alipay_return";
+        $return_url = Config::get('app.url')."/pay/alipay_return";
         //需http://格式的完整路径，不能加?id=123这类自定义参数，不能写成http://localhost/
 
         //商户订单号
@@ -83,7 +83,7 @@ class PayService
 				"subject"	=> $subject,
 				"total_fee"	=> $total_fee,
 				"body"		=> $body,
-				"it_b_pay"	=> GlobalDef::ORDER_EXPIRE_MINUTE;
+				"it_b_pay"	=> GlobalDef::ORDER_EXPIRE_MINUTE . 'm',
 				"show_url"	=> $show_url,
 				"anti_phishing_key"	=> $anti_phishing_key,
 				"exter_invoke_ip"	=> $exter_invoke_ip,
@@ -118,10 +118,43 @@ class PayService
 
 	public static function getPingppObject($channel,$info)
 	{
-		if ($channel == '') 
-		{
-		}
-	}
+		//获取pingxx配置
+		$pingConfig = Config::get('pay.pingxx');
 
+		\Pingpp\Pingpp::setApiKey($pingConfig['api_key']);
+
+		$payInfo = [
+			        'order_no'  => $info['order_no'],
+			        'app'       => array('id' => $pingConfig['app_id']),
+			        'channel'   => $channel,
+			        'amount'    => (int)($info['total_fee']*100),
+			        'client_ip' => Utility::getClientIp(),
+			        'currency'  => 'cny',
+			        'subject'   => $info['subject'],
+			        'body'      => $info['subject'],
+			        'extra'     => []
+			    ];
+
+		switch ($channel) {
+			//pc-支付宝direct
+			case GlobalDef::PAY_CHANNEL_ALIPAY_PC_DIRECT:
+			case GlobalDef::PAY_CHANNEL_ALIPAY_WAP:
+			$payInfo['extra'] = ['success_url'=> Config::get('app.url').'/pay/return'];
+			break;
+			case GlobalDef::PAY_CHANNEL_UPACP_WAP:
+			case GlobalDef::PAY_CHANNEL_UPACP_PC:
+			$payInfo['extra'] = ['result_url'=> Config::get('app.url').'/pay/return'];
+			break;
+			case GlobalDef::PAY_CHANNEL_WX:
+			break;
+			default:
+				return false;
+				break;
+		}
+
+		$ch = \Pingpp\Charge::create($payInfo);
+
+		return $ch;
+	}
 }
 

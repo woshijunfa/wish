@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Models\GlobalDef;
 use App\Services\OrderService;
 use App\Services\PayService;
+use App\Services\CalendarService;
 use Request;
 use View;
 use Input;
@@ -63,11 +64,39 @@ class OrderController extends Controller
 		return View::make('pc.payOrder',$orderInfo);
 	}
 
+	public function ipayOrderGet(Request $request)
+	{
+		//获取订单信息
+		$orderId = Input::get('order');
+		if (empty($orderId)) return $this->errorPage('出错啦！');
+
+		//获取订单信息
+		$orderInfo = Order::getOrderInfoById($orderId);
+		if (empty($orderInfo) || $orderInfo['user_id'] != Auth::id()) return $this->errorPage('出错啦！');
+
+		//不需要支付的订单转到订单详情
+		if($orderInfo['order_status'] != GlobalDef::ORDER_STATUS_INIT) return Redirect::to('/i/order/detial?order_id=' . $orderId);
+
+
+		//获取对应的用户信息
+		$partnerInfo = User::getUser($orderInfo['partner_id']);
+		if (empty($partnerInfo))  return $this->errorPage('出错啦！');
+
+		//补充信息
+		$orderInfo['nickname'] = $partnerInfo['nickname'];
+		$orderInfo['mobile'] = $partnerInfo['mobile'];
+		$orderInfo['email'] = $partnerInfo['email'];
+		$orderInfo['head_image'] = $partnerInfo['head_image'];
+
+		return View::make('h5.payOrder',$orderInfo);
+	}
+
+
 	//获取支付对象页面
 	public function getPayChangeObject(Request $request)
 	{
 		//获取订单信息
-		$orderId = Input::get('order');
+		$orderId = Input::get('order_id');
 		$channel = Input::get('channel');
 
 		if (empty($orderId) || empty($channel)) return $this->returnJsonResult(1,'出错了，请刷新重试');
@@ -89,27 +118,29 @@ class OrderController extends Controller
 		if (!$isok) return $this->returnJsonResult(4,'您预约的日期已经有自己的安排了');
 
 		//生成对象
+		$charge = PayService::getPingppObject($channel,$orderInfo);
+
+		if (empty($charge)) return $this->returnJsonResult(5,'不支持该支付方式');
+
+		//转换数组格式
+		$charge = json_decode(sprintf('%s',$charge),true);
+
+		return $this->returnJsonResult(0,'',['charge'=>$charge]);
+	}
+
+
+
+	//银联PC端返回结果
+	public function onUpacpPcReturn(Request $request)
+	{
 
 	}
 
-	
 
 
-
-
-
-
-
-
-
-
-
-
-	//alipay页面跳转返回
-	public function onAlipayReturn(Request $request)
+	//支付宝PC端返回支付结果
+	public function onAlipayPcReturn(Request $request)
 	{
-
-
 		//获取参数
 		$params = Input::get();
 
@@ -118,9 +149,21 @@ class OrderController extends Controller
 		Log::info('OrderController::onAlipayReturn params:'.json_encode($params));
 
 		$isSuccess = self::alipayProcess($params);
+	}
 
+	//支付宝H5端返回支付结果
+	public function onAlipayH5Rerurn(Request $request)
+	{
 
 	}
+
+	public function 
+
+
+
+
+
+
 
 	//alipay后台通知支付结果
 	public function onAlipayNotify(Request $request)

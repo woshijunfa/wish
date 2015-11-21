@@ -6,7 +6,7 @@
 
   <div class="notice">
     订单名称：{{$subject}}<br/>
-    订单号：{{$order_id}}<br/>
+    订单号：<span id='order_id'>{{$order_id}}</span><br/>
     订单日期：{{date('Y-m-d H-i-s',$created_at)}}<br/>
     出行日期：{{$order_dates}}<br/>
     导游：{{$nickname}}<br/>
@@ -22,16 +22,12 @@
   <div class="pay_method">
     <ul class="bank-list bank-list--xpay">
       <li class="item item left">
-          <input id="check-alipay" class="radio ui-radio" type="radio" name="paytype"  checked="checked"  value="alipay">
+          <input id="check-alipay" class="radio ui-radio" type="radio" name="paytype"  checked="checked"  value="alipay_pc_direct">
           <label for="check-alipay" class="bank-logo" title="支付宝"><span class="bank bank--alipay">支付宝</span></label>
       </li>
       <li class="item item">
-          <input id="check-tenpay" class="radio ui-radio" type="radio" name="paytype" value="tenpay">
-          <label for="check-tenpay" class="bank-logo" title="财付通"><span class="bank bank--tenpay">财付通</span></label>
-      </li>
-      <li class="item item">
-          <input id="check-wxqrpay" class="radio ui-radio" type="radio" name="paytype" value="wxqrpay">
-          <label for="check-wxqrpay" class="bank-logo" title="微信支付"><span class="bank bank--wxqrpay">微信支付</span></label>
+          <input id="check-wxqrpay" class="radio ui-radio" type="radio" name="paytype" value="upacp_pc">
+          <label for="check-wxqrpay" class="bank-logo" title="微信支付"><span class="bank bank--wxqrpay">银联支付</span></label>
       </li>
     </ul>
   </div>

@@ -38,16 +38,19 @@ Route::group(['middleware' => 'auth'], function ()
 	//订单相关
 	Route::any('/order/createOrder','OrderController@createOrder');
 	Route::any('/order/pay','OrderController@payOrderGet');
+
+	//h5路由
+	Route::any('/i/order/pay','OrderController@ipayOrderGet');
 });
 
 //支付宝验证相关
-Route::get('/pay/alipay_return','OrderController@onAlipayReturn'); 			//定单支付成功Get
+Route::any('/pay/alipay_return','OrderController@onAlipayReturn'); 			//定单支付成功Get
 Route::post('/pay/alipay_notify', 'OrderController@onAlipayNotify'); 		//订单支付成功Post
 
-Route::post('/pay/getPayChangeObject', 'PayController@getPayChangeObject'); 		//订单支付成功Post
+//通用的支付返回结果
+Route::any('/pay/return','OrderController@onPayReturn'); 			//定单支付成功Get
 
-
-
+Route::post('/pay/getPayChangeObject', 'OrderController@getPayChangeObject'); 		//订单支付成功Post
 Route::get('/test', "TestController@test");
 
 

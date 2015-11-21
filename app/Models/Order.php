@@ -34,6 +34,7 @@ class Order extends Model
                             'order_status',
                             'created_at',
                             'updated_at',
+                            'order_no',
                             'remark'
                             ];    
     
@@ -43,6 +44,7 @@ class Order extends Model
     {
         if (empty($info)) return false;
         $info['order_dates'] =  implode(',', $info['order_dates']);
+        $info['trade_no'] =  uniqid();
         $result = self::create($info);
         return empty($result) ? $result : $result->order_id;
     }

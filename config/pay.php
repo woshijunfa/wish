@@ -61,4 +61,8 @@ return [
             // 'SERVICE_NOTIFY_URL' => 'http://' . $_SERVER['HTTP_HOST'] . '/pay/notify/wxpay/2833826846',
     ],
 
+    'pingxx'=>[
+            'api_key'   =>    'sk_test_yHKS84aDabzLj5SiDCrLif58',
+            'app_id'       =>    'app_vr1mjDqP8un1LWP0',
+    ],
 ];

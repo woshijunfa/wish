@@ -38,6 +38,13 @@ class GlobalDef{
     const   ORDER_STATUS_APPEAL_FINISH                  =   7;      //申诉方式结束订单
 
 
+    //支付通道状态吗
+    const   PAY_CHANNEL_ALIPAY_PC_DIRECT                =   'alipay_pc_direct';         //支付宝PC直接支付
+    const   PAY_CHANNEL_UPACP_PC                        =   'upacp_pc';                 //PC的银联支付
+
+    const   PAY_CHANNEL_ALIPAY_WAP                      =   'alipay_wap';               //支付宝wap网页支付
+    const   PAY_CHANNEL_UPACP_WAP                       =   'upacp_wap';                //银联 WAP
+    const   PAY_CHANNEL_WX                              =   'wx';                       //微信支付
 
 
 

@@ -15,6 +15,7 @@ td div
     height: 30px;
 }
 
+
 div.validday.cal_status_rest
 {
   background: #aaa;
