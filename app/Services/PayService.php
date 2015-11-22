@@ -8,6 +8,7 @@ use App\Models\Order;
 use App\Models\Utility;
 use App\Models\GlobalDef;
 use Config;
+use Log;
 
 require_once(base_path().'/app/Libs/alipay/lib/alipay_submit.class.php');
 require_once(base_path().'/app/Libs/alipay/lib/alipay_notify.class.php');
@@ -122,9 +123,10 @@ class PayService
 		$pingConfig = Config::get('pay.pingxx');
 
 		\Pingpp\Pingpp::setApiKey($pingConfig['api_key']);
+		$tradeNo = Utility::createTradeNo();
 
 		$payInfo = [
-			        'order_no'  => $info['order_no'],
+			        'order_no'  => $tradeNo,
 			        'app'       => array('id' => $pingConfig['app_id']),
 			        'channel'   => $channel,
 			        'amount'    => (int)($info['total_fee']*100),
@@ -152,9 +154,50 @@ class PayService
 				break;
 		}
 
-		$ch = \Pingpp\Charge::create($payInfo);
+		$charge = \Pingpp\Charge::create($payInfo);
+		if (empty($charge)) 
+		{
+			return false;
+		}
 
-		return $ch;
+		//转成php数组
+		$charge = json_decode(sprintf('%s',$charge),true);
+
+		//插入交易表进行记录
+		$result = TradeService::createByPingCharge($charge,$info,$tradeNo);
+		if(empty($result)) return false;
+
+		return $charge;
+	}
+
+	//根据ch_id判断是否支付成功
+	//$ch_id  	pingxx的charge对象id
+	public static function checkPayByPingId($chId)
+	{
+		try {
+
+			if (empty($chId)) return false;
+
+			//获取pingxx配置
+			$pingConfig = Config::get('pay.pingxx');
+
+			\Pingpp\Pingpp::setApiKey($pingConfig['api_key']);
+
+			//查询交易详情
+			$result = \Pingpp\Charge::retrieve($chId);
+			$result = json_decode(sprintf('%s',$result),true);
+			Log::info('PayService::checkPayByPingId retrieve result:' . json_encode($result));
+
+			//获取结果失败
+			if (empty($result) || !array_key_exists('paid',$result)) return false;
+
+			//返回结果
+			return $result['paid'] === true;
+		} catch (\Exception $e) {
+			Utility::LogException($e);
+			return false;
+		}
+
 	}
 }
 

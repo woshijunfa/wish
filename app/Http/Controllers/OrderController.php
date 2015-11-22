@@ -5,13 +5,16 @@ namespace App\Http\Controllers;
 use App\Models\Utility;
 use App\Models\Order;
 use App\Models\User;
+use App\Models\Trade;
 use App\Models\GlobalDef;
 use App\Services\OrderService;
 use App\Services\PayService;
 use App\Services\CalendarService;
 use Request;
+use Redirect;
 use View;
 use Input;
+use Log;
 use Auth;
 
 require_once(base_path().'/app/Libs/pingpp/init.php');
@@ -122,57 +125,41 @@ class OrderController extends Controller
 
 		if (empty($charge)) return $this->returnJsonResult(5,'不支持该支付方式');
 
-		//转换数组格式
-		$charge = json_decode(sprintf('%s',$charge),true);
-
 		return $this->returnJsonResult(0,'',['charge'=>$charge]);
 	}
 
 
 
-	//银联PC端返回结果
-	public function onUpacpPcReturn(Request $request)
-	{
-
-	}
-
-
-
 	//支付宝PC端返回支付结果
-	public function onAlipayPcReturn(Request $request)
+	public function onPayReturn(Request $request)
 	{
 		//获取参数
 		$params = Input::get();
+		Log::info('OrderController::onPayReturn params:'.json_encode($params));
 
-		var_dump($params);die;
+		//获取order_no也就是trade_no
+		$tradeNo = Input::get('out_trade_no'); 					//支付宝
+		if (empty($tradeNo)) $tradeNo = Input::get('orderId');	//银联
+		if (empty($tradeNo)) return $this->errorPage('出错啦');
 
-		Log::info('OrderController::onAlipayReturn params:'.json_encode($params));
+		//获取trade_no对应额trade信息
+		$tradeInfo = Trade::getTradeByTradeNo($tradeNo);
+		if (empty($tradeInfo)) return $this->errorPage('出错啦');
 
-		$isSuccess = self::alipayProcess($params);
+		//验证是否支付成功
+		$isok = PayService::checkPayByPingId($tradeInfo['ch_id']);
+		if ($isok !== true) return $this->errorPage('出错啦');
+
+		//修改订单支付状态
+		$isSuccess = OrderService::succesPayOrder($tradeInfo);
+
+		//为支付成功，重新转到订单支付页面
+		if (!$isSuccess) return $this->errorPage('订单支付失败，重新支付？',['url'=>'/order/pay?order='.$tradeInfo['order_id'],'msg'=>'重新支付']);
+
+		//跳转到订单详情页面
+		return Redirect::to('order/detial?order_id=' . $tradeInfo['order_id']);
 	}
 
-	//支付宝H5端返回支付结果
-	public function onAlipayH5Rerurn(Request $request)
-	{
-
-	}
-
-	public function 
-
-
-
-
-
-
-
-	//alipay后台通知支付结果
-	public function onAlipayNotify(Request $request)
-	{
-		//获取参数
-		$params = Input::get();
-		Log::info('OrderController::onAlipayNotify params:'.json_encode($params));
-
-	}
 
 	//订单成功支付处理
 	private function alipayProcess($params)

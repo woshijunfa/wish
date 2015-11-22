@@ -71,7 +71,7 @@ CREATE TABLE `calendar` (
   KEY `user_id` (`user_id`),
   KEY `month` (`month`),
   KEY `date` (`date`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -80,7 +80,7 @@ CREATE TABLE `calendar` (
 
 LOCK TABLES `calendar` WRITE;
 /*!40000 ALTER TABLE `calendar` DISABLE KEYS */;
-INSERT INTO `calendar` VALUES (1,1,0,'2015-10-01',NULL,'free',80,'',1447749460,1447749460,'2015-10',0),(2,1,0,'2015-10-02',NULL,'free',80,'',1447749472,1447749472,'2015-10',0),(3,1,1,'2015-11-02',NULL,'free',80,'',1447749479,1448038167,'2015-11',1448038177),(4,1,1,'2015-10-12',NULL,'free',100,'',0,0,'2015-10',0),(5,1,1,'2015-11-12',NULL,'free',100,'',0,0,'2015-11',0),(6,2,1,'2015-11-02',NULL,'rest',80,'',0,1448038167,'2015-11',1448038177),(12,2,0,'2015-10-12',NULL,'rest',80,'',1447826874,1447826874,'2015-10',0),(13,2,0,'2015-10-13',NULL,'rest',80,'',1447826874,1447826874,'2015-10',0),(14,2,0,'2015-10-14',NULL,'rest',80,'',1447826874,1447826874,'2015-10',0);
+INSERT INTO `calendar` VALUES (1,1,0,'2015-10-01',NULL,'free',80,'',1447749460,1447749460,'2015-10',0),(2,1,0,'2015-10-02',NULL,'free',80,'',1447749472,1447749472,'2015-10',0),(3,1,1,'2015-11-02','date','date',80,'',1447749479,1448177063,'2015-11',1448038177),(4,1,1,'2015-10-12',NULL,'free',100,'',0,0,'2015-10',0),(5,1,5,'2015-11-12','free','date',100,'',0,1448177183,'2015-11',0),(6,2,1,'2015-11-02','rest','date',80,'',0,1448177063,'2015-11',1448038177),(12,2,0,'2015-10-12',NULL,'rest',80,'',1447826874,1447826874,'2015-10',0),(13,2,0,'2015-10-13',NULL,'rest',80,'',1447826874,1447826874,'2015-10',0),(14,2,0,'2015-10-14',NULL,'rest',80,'',1447826874,1447826874,'2015-10',0),(15,2,5,'2015-11-12','free','date',0,'',1448177115,1448177183,'2015-11',0);
 /*!40000 ALTER TABLE `calendar` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -105,10 +105,9 @@ CREATE TABLE `order` (
   `updated_at` bigint(20) NOT NULL DEFAULT '0',
   `remark` varchar(200) NOT NULL DEFAULT '',
   `order_dates` varchar(1000) NOT NULL DEFAULT '',
-  `order_no` varchar(20) NOT NULL DEFAULT '',
-  PRIMARY KEY (`order_id`),
-  UNIQUE KEY `trade_no` (`order_no`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+  `trade_no` varchar(20) NOT NULL DEFAULT '',
+  PRIMARY KEY (`order_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -117,7 +116,7 @@ CREATE TABLE `order` (
 
 LOCK TABLES `order` WRITE;
 /*!40000 ALTER TABLE `order` DISABLE KEYS */;
-INSERT INTO `order` VALUES (1,'1日游','80.00','8.00','72.00',0,2,1,0,1447993144,1447993144,'','2015-11-02','1234567890123'),(2,'1日游','80.00','8.00','72.00',0,2,1,0,1448097109,1448097109,'','','');
+INSERT INTO `order` VALUES (1,'1日游','80.00','8.00','72.00',0,2,1,1,1448175407,1448176440,'','2015-11-02','565158914087f'),(2,'1日游','80.00','8.00','72.00',0,2,1,0,1448097109,1448097109,'','',''),(5,'1日游','100.00','10.00','90.00',1448177183,2,1,1,1448177174,1448177183,'','2015-11-12','56516e19bf45f');
 /*!40000 ALTER TABLE `order` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -145,6 +144,39 @@ LOCK TABLES `test` WRITE;
 /*!40000 ALTER TABLE `test` DISABLE KEYS */;
 INSERT INTO `test` VALUES (1,NULL,2015,2015),(2,NULL,2015,2015),(3,'df',2015,2015),(4,'df',0,0),(5,'df',1447514650,1447514650),(6,'df',NULL,NULL),(7,'df',1447514952,1447514952),(8,'df',1447514961,1447514961),(9,'df',1447514971,1447514971),(10,'df',1447514978,1447514978),(11,'df',1447515039,1447515039),(12,'df',1447515041,1447515041),(13,'df',1447515098,1447515098),(14,'df',1447515110,1447515110),(15,'df',1447515122,1447515122);
 /*!40000 ALTER TABLE `test` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `trade`
+--
+
+DROP TABLE IF EXISTS `trade`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `trade` (
+  `trade_no` varchar(45) NOT NULL DEFAULT '',
+  `ch_id` varchar(100) NOT NULL DEFAULT '',
+  `order_id` bigint(20) NOT NULL DEFAULT '0',
+  `status` varchar(45) NOT NULL DEFAULT 'init',
+  `channel` varchar(45) NOT NULL DEFAULT '',
+  `amount` decimal(10,2) NOT NULL DEFAULT '0.00',
+  `created_at` bigint(20) NOT NULL DEFAULT '0',
+  `updated_at` bigint(20) NOT NULL DEFAULT '0',
+  `remark` varchar(200) NOT NULL DEFAULT '',
+  PRIMARY KEY (`trade_no`),
+  KEY `indexorderid` (`order_id`),
+  KEY `indexorderno` (`trade_no`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `trade`
+--
+
+LOCK TABLES `trade` WRITE;
+/*!40000 ALTER TABLE `trade` DISABLE KEYS */;
+INSERT INTO `trade` VALUES ('56515795484c8','ch_nrv944yXfrvL404Se1uT4mH0',1,'init','alipay_wap','80.00',1448171413,1448171413,''),('565157965d1c1','ch_mzHWrH5OKOyPbDq94GznTGeT',1,'init','alipay_wap','80.00',1448171414,1448171414,''),('565157c3c9405','ch_DezLiH0OOenTr50C4848afP0',1,'init','alipay_wap','80.00',1448171460,1448171460,''),('565158914087f','ch_GCOibP9GGW1KD8qfzPrnznnL',1,'init','alipay_wap','80.00',1448171665,1448171665,''),('56516e19bf45f','ch_aLin1K4uf9WTbTiXf9H0q14O',5,'init','alipay_pc_direct','100.00',1448177178,1448177178,'');
+/*!40000 ALTER TABLE `trade` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -189,4 +221,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-11-21 23:50:16
+-- Dump completed on 2015-11-22 16:07:29

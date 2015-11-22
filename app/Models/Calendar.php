@@ -10,7 +10,7 @@ use DB;
 class Calendar extends Model
 {
 
-    /**
+    /** 
      * The database table used by the model.
      *
      * @var string
@@ -80,23 +80,20 @@ class Calendar extends Model
         //更新导游的日程表
         $count = self::where('user_id',$busId)
                     ->whereIn('date',$dates)
-                    ->where('status','free')
-                    ->where('date','>=',date('Y-m',time()))
                     ->update(['pre_status'=>DB::Raw('status'),
                                 'status'=>'date',
                                 'order_id'=>$orderId
                             ]);
-        if ($count != count($dates)) return false;
+//        if ($count != count($dates)) return false;
 
         //更新游客日程表
-        $count = self::where('user_id',$busId)
+        $count = self::where('user_id',$cusId)
                     ->whereIn('date',$dates)
-                    ->whereIn('status',['free','rest'])
-                    ->where('date','>=',date('Y-m',time()))
                     ->update(['pre_status'=>DB::Raw('status'),
                                 'status'=>'date',
                                 'order_id'=>$orderId
                             ]);
+                    
         return $count != count($dates);        
     }
 

@@ -36,6 +36,7 @@ class GlobalDef{
     const   ORDER_STATUS_APPLY_CANCEL                   =   5;      //订单申请取消（在确认之后，finish之前取消）
     const   ORDER_STATUS_APPEAL                         =   6;      //导游不同意取消，进入申诉状态
     const   ORDER_STATUS_APPEAL_FINISH                  =   7;      //申诉方式结束订单
+    const   ORDER_STATUS_JUST_PAYED                     =   8;      //只是支付成功，但是行程单被抢约
 
 
     //支付通道状态吗

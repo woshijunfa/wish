@@ -47,14 +47,17 @@ class test extends Command
      */
     public function handle()
     {
-//        var_dump(uniqid());die;
-
-                //生成对象
         $orderInfo = Order::getOrderInfoById(1);
+        $dates = explode(',',$orderInfo['order_dates']);
+        //更新行程单
+        Calendar::orderCalendar($orderInfo['user_id'],$orderInfo['partner_id'],$dates,$orderInfo['order_id']);
+die;
+        var_dump();
+
         var_dump($orderInfo);
         $charge = PayService::getPingppObject(GlobalDef::PAY_CHANNEL_ALIPAY_PC_DIRECT,$orderInfo);
-//        $str = json_decode(sprintf('%s',$charge),true);
-        var_dump($charge);
+        $str = json_decode(sprintf('%s',$charge),true);
+        var_dump($str);
 die;
 die;
 die;

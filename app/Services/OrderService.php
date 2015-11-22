@@ -80,21 +80,35 @@ class OrderService
 		$order['partner_fee'] = $totalFee - $order['service_fee'];
 		$order['user_id'] = $cusInfo['user_id'];
 		$order['partner_id'] = $busInfo['user_id'];
-		$order['status'] = GlobalDef::ORDER_STATUS_INIT;
+		$order['order_status'] = GlobalDef::ORDER_STATUS_INIT;
 		$order['order_dates'] = $dates;
 
 		return Order::createOrder($order);
 	}
 
-	public static function payOrder($orderId)
+	//完成订单
+	//$cusInfo 					下单人的信息
+	//$busInfo 					导游的信息
+	//$dates 					预定的日期
+	//$totalFee 				总金额
+	//成功返回订单id，否则返回空
+	public static function succesPayOrder($tradeInfo)
 	{
+		if (empty($tradeInfo)) return false;
+
+		//更新订单状态
+		Order::successOrder($tradeInfo['order_id'],$tradeInfo['trade_no']);
+
+		//获取订单详情
+		$orderInfo = Order::getOrderInfoById($tradeInfo['order_id']);
+		if (empty($orderInfo) || $orderInfo['order_status'] != GlobalDef::ORDER_STATUS_PAYED) return false;
+
+		$dates = explode(',',$orderInfo['order_dates']);
+
     	//更新行程单
-    	$isok = Calendar::orderCalendar($cusId,$busId,$dates,$orderId);
-    	if (true !== $isok) 
-    	{
-    		Log::info('订单行程单失败 info:' . json_encode(['user_id'=>$cusId,'user_id'=>$busId,'dates'=>$dates,'totalprice'=>$totalPrice]));
-        	throw new Exception("订单行程单失败", 1);
-    	}
+    	Calendar::orderCalendar($orderInfo['user_id'],$orderInfo['partner_id'],$dates,$tradeInfo['order_id']);
+
+    	return true;
 	}
 
 }

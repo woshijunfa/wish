@@ -347,4 +347,9 @@ class Utility extends Eloquent {
     {
         Session::pull('url.intended');
     }
+
+    public static function createTradeNo()
+    {
+        return uniqid();
+    }
 }

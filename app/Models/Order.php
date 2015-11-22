@@ -34,7 +34,8 @@ class Order extends Model
                             'order_status',
                             'created_at',
                             'updated_at',
-                            'order_no',
+                            'trade_no',
+                            'order_dates',
                             'remark'
                             ];    
     
@@ -44,7 +45,6 @@ class Order extends Model
     {
         if (empty($info)) return false;
         $info['order_dates'] =  implode(',', $info['order_dates']);
-        $info['trade_no'] =  uniqid();
         $result = self::create($info);
         return empty($result) ? $result : $result->order_id;
     }
@@ -57,5 +57,22 @@ class Order extends Model
         return empty($result) ? $result : $result->toArray();
     }
 
+    //订单支付成功，更改状态
+    public static function successOrder($orderId,$tradeNo)
+    {
+        if (empty($orderId) || empty($tradeNo)) return false;
+
+        $udpateInfo = [
+            'order_status'      =>  GlobalDef::ORDER_STATUS_PAYED,
+            'trade_no'          =>  $tradeNo,
+            'pay_time'          => time()
+        ];
+
+        $result = self::where('order_id',$orderId)
+                    ->where('order_status',GlobalDef::ORDER_STATUS_INIT)
+                    ->update($udpateInfo);
+
+        return $result;
+    }
 }
 
